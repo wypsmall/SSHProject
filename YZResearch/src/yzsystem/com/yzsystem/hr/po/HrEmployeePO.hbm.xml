@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.yzsystem.hr.po.HrEmployeePO" table="HR_EMPLOYEE">
+        <id name="employeeId" column="EMPLOYEE_ID" type="java.lang.String">
+            <generator class="uuid"/>
+        </id>
+		<property name="employeeNo" type="string"  column="EMPLOYEE_NO" />
+		<property name="employeeName" type="string"  column="EMPLOYEE_NAME" />
+		<property name="employeeSex" type="short"  column="EMPLOYEE_SEX" />
+		<property name="employeeBirthType" type="short"  column="EMPLOYEE_BIRTH_TYPE"/>
+    	<property name="employeeBirth" type="java.util.Date"  column="EMPLOYEE_BIRTH" />
+    	<property name="employeePostName" type="string"  column="EMPLOYEE_POST_NAME"/>
+    	<property name="employeeState" type="short"  column="EMPLOYEE_STATE" />
+    	<property name="entryJobDate" type="java.util.Date"  column="ENTRY_JOB_DATE" />
+    	<property name="contractStartDate" type="java.util.Date"  column="CONTRACT_START_DATE" />
+    	<property name="contractEndDate" type="java.util.Date"  column="CONTRACT_END_DATE"/>
+    	<property name="offJobDate" type="java.util.Date"  column="OFF_JOB_DATE" />
+    	<property name="identification" type="string"  column="IDENTIFICATION"/>
+    	<property name="contact" type="string"  column="CONTACT"/>
+    	<property name="contactTel" type="string"  column="CONTACT_TEL" />
+    	<property name="memo" type="string"  column="MEMO"/>
+    	<property name="homeAddress" type="string"  column="HOME_ADDRESS"/>
+    	<property name="accountType" type="short"  column="ACCOUNT_TYPE"/>
+    	<property name="hasBuyShebao" type="short"  column="HASBUYSHEBAO"/>
+    	<property name="graduateDate" type="java.util.Date"  column="GRADUATE_DATE"/>
+    	<property name="graduateSch" type="string"  column="GRADUATE_SCH"/>
+    	<property name="education" type="string"  column="EDUCATION"/>
+    	<property name="profession" type="string"  column="PROFESSION"/>
+    	<many-to-one name="org" column="HR_ORG_ID" class="com.yzsystem.hr.po.HrOrgPO" fetch="join" lazy="false"/>  
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.yzsystem.exhibitions.po.ExhibitionProjectPO" table="YZ_EXHIBITION_PROJECT">
+        <id name="exhProId" column="EXHPRO_ID" type="java.lang.Integer">
+            <generator class="native"/>
+        </id>
+		<property name="exhProChzName" type="string" column="EXHPRO_CHZNAME" />
+		<property name="exhProNo" type="string" column="EXHPRO_NO" />
+    </class>
+    
+    <class name="com.yzsystem.exhibitions.po.ExhibitionEnterprisePO" table="YZ_EXHPRO_ENTERPRISE">
+        <id name="exhEnterpriseId" column="EXHENT_ID" type="java.lang.Integer">
+            <generator class="native"/>
+        </id>                                  
+        <many-to-one name="enterprise" column="ENTERPRISE_ID" class="com.yzsystem.crm.po.EnterprisePO" fetch="join" lazy="false"/>  
+		<many-to-one name="exhPro" column="EXHPRO_ID" class="com.yzsystem.exhibitions.po.ExhibitionProjectPO" fetch="join" lazy="false"/>  
+    </class>
+	
+</hibernate-mapping>

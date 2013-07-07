@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.imti.sysmgr.po.UserPO" table="IMTI_SYS_USER">
+        <id name="id" column="FID" type="java.lang.String">
+            <generator class="uuid"/>
+        </id>
+        <property name="loginId"  type="string" update="true" insert="true"  column="FLOGIN_ID" length="50"/>
+		<property name="password" type="string" update="false" insert="true"  column="FPASSWORD" length="100"/>
+		<property name="userNick" type="string" update="true" insert="true"  column="FUSER_NICK" length="50"/>
+		<property name="userName" type="string" update="true" insert="true"  column="FUSER_NAME" length="50"/>
+		<property name="valid" type="string" update="true" insert="true"  column="FVALID" length="1"/>
+		<property name="companyCode" type="string" update="true" insert="true"  column="FCOMPANY_CODE" length="30"/>
+		<property name="orgId" type="string" update="true" insert="true"  column="FORG_ID" length="32"/>
+		<property name="loginType" type="string" update="true" insert="true"  column="FLOGIN_TYPE" length="1"/>
+		<property name="userType" type="string" update="true" insert="true"  column="USER_TYPE" length="1"/>
+		<property name="finCode" type="string" update="true" insert="true"  column="FIN_CODE" length="32"/>
+		<!-- 用户角色 -->
+		<set name="roleSet" table="IMTI_SYS_USER_ROLE" cascade="save-update" lazy="false" inverse="false">  
+            <key column="FUSER_ID"></key>  
+            <many-to-many column="FROLE_ID" class="com.imti.sysmgr.po.SysRolePO"></many-to-many>  
+        </set> 
+        <!-- 用户组织机构-->
+        <set name="orgSet" table="IMTI_SYS_USER_ORG_REAL" cascade="save-update" lazy="false" inverse="false">  
+            <key column="USER_ID"></key>  
+            <many-to-many column="ORG_ID" class="com.imti.sysmgr.po.OrgPO"></many-to-many>  
+        </set> 
+		<!-- 所属机构名称名称 -->
+		<property name="orgName" formula="(select o.FORG_NAME from IMTI_SYS_ORG o where o.FORG_ID=FORG_ID)"/> 
+    	<property name="ztId" type="string" update="true" insert="true"  column="ZT_ID" length="100"/>
+    	<property name="isCreater" type="int" update="true" insert="true"  column="IS_CREATER"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.yzsystem.tresearch.po.CompanyPO" table="T_COMPANY">
+        <id name="cid" column="cid" type="java.lang.Integer">
+            <generator class="native"/>
+        </id>
+		<property name="cname" type="string" column="cname" />
+    </class>
+    
+    <class name="com.yzsystem.tresearch.po.ExhibitionPO" table="T_EXHIBITION">
+        <id name="eid" column="eid" type="java.lang.Integer">
+            <generator class="native"/>
+        </id>
+		<property name="ename" type="string" column="ename" />
+		<property name="eno" type="string" column="eno" />
+    </class>
+    
+	<class name="com.yzsystem.tresearch.po.AbroadPersonPO" table="T_ABROAD_PERSON">
+        <id name="apid" column="apid" type="java.lang.Integer">
+            <generator class="native"/>
+        </id>
+        <many-to-one name="companyPO" column="cid" class="com.yzsystem.tresearch.po.CompanyPO" fetch="join" lazy="false"/>  
+		<many-to-one name="exhibitionPO" column="eid" class="com.yzsystem.tresearch.po.ExhibitionPO" fetch="join" lazy="false"/>
+		<property name="apaddress" type="string" column="apaddress" /> 
+		<property name="apname" type="string" column="apname" />  	
+		<property name="apspell" type="string" column="apspell" />  	
+		<property name="apsex" type="int" column="apsex" /> 		
+		<property name="apmstate" type="int" column="apmstate" /> 	
+		<property name="apduties" type="string" column="apduties" />  
+		<property name="apbirthday" type="string" column="apbirthday" />
+		<property name="apborn" type="string" column="apborn" /> 		
+		<property name="aptel" type="string" column="aptel" /> 		
+		<property name="apmobile" type="string" column="apmobile" /> 	
+		<property name="apfax" type="string" column="apfax" />  		
+		<property name="apcardno" type="string" column="apcardno" /> 	
+		<property name="appasstype" type="int" column="appasstype" />
+		<property name="appassno" type="string" column="appassno" />  
+		<property name="appassdate" type="string" column="appassdate" />
+		<property name="aptriptype" type="int" column="aptriptype" />
+		<property name="apdeparture" type="int" column="apdeparture" />
+		<property name="aproomtype" type="int" column="aproomtype" />
+    </class>
+    
+    <class name="com.yzsystem.tresearch.po.ExhComPO" table="T_EXHCOM">
+        <id name="ecid" column="ecid" type="java.lang.Integer">
+            <generator class="native"/>
+        </id>
+        <many-to-one name="companyPO" column="cid" class="com.yzsystem.tresearch.po.CompanyPO" fetch="join" lazy="false"/>  
+		<many-to-one name="exhibitionPO" column="eid" class="com.yzsystem.tresearch.po.ExhibitionPO" fetch="join" lazy="false"/>
+		<property name="remark" type="string" column="remark" /> 
+    </class>
+</hibernate-mapping>

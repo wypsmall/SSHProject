@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+  xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd" default-autowire="byName">
+	
+	<!-- 用户登录日志管理 -->
+	<bean id="loginLogDao" class="com.imti.sysmgr.dao.impl.LoginLogDaoImpl" />
+	<bean id="loginLogService" class="com.imti.sysmgr.service.impl.LoginLogServiceImpl" />
+	
+	<!-- 系统资源管理 -->
+	<bean id="sysResourceDao" class="com.imti.sysmgr.dao.impl.SysResourceDaoImpl" />
+	<bean id="sysResourceService" class="com.imti.sysmgr.service.impl.SysResourceServiceImpl" />
+	
+	<!-- 系统管理:用户管理、权限管理、角色管理 -->
+	<bean id="sysMgrDao" class="com.imti.sysmgr.dao.impl.SysMgrDaoImpl" />
+	<bean id="sysMgrService" class="com.imti.sysmgr.service.impl.SysMgrServiceImpl" />
+	<!-- 系统错误信息-->
+	<bean id="warnDao" class="com.imti.sysmgr.dao.impl.WarnDaoImpl" />
+	<bean id="warnService" class="com.imti.sysmgr.service.impl.WarnServiceImpl" />
+	
+	
+	
+</beans>

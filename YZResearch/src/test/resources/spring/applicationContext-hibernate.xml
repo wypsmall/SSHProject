@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+  xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+	
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mappingResources">
+			<list>
+				<value>com/imti/sysmgr/po/LoginLogPO.hbm.xml</value>
+				<value>com/imti/sysmgr/po/SysOperatorPO.hbm.xml</value>
+				<value>com/imti/sysmgr/po/SysResourcePO.hbm.xml</value>
+				<value>com/imti/sysmgr/po/SysRoleRightPO.hbm.xml</value>
+				<value>com/imti/sysmgr/po/SysRolePO.hbm.xml</value>
+				<value>com/imti/sysmgr/po/OrgPO.hbm.xml</value>
+				<value>com/imti/sysmgr/po/UserPO.hbm.xml</value>
+				<value>com/imti/sysmgr/po/WarnPO.hbm.xml</value>
+				
+				<!-- 骏鹏物流管理系统   -->
+				<value>com/jplms/basedata/po/PortPO.hbm.xml</value>
+				<value>com/jplms/basedata/po/MerchandisePO.hbm.xml</value>
+				<value>com/jplms/basedata/po/JpWorkOrderTypePO.hbm.xml</value>
+				<value>com/jplms/basedata/po/JpUserTypePO.hbm.xml</value>
+				<value>com/jplms/basedata/po/JpPartnerPO.hbm.xml</value>
+				<value>com/jplms/basedata/po/JpBusiRealPO.hbm.xml</value>
+				<value>com/jplms/basedata/po/JpInsuranceInfo.hbm.xml</value>
+				<value>com/jplms/basedata/po/JpSysLogPO.hbm.xml</value>
+				<value>com/jplms/basedata/po/JpFeeTypePO.hbm.xml</value>
+				<value>com/jplms/basedata/po/JpBusiOpeLogPO.hbm.xml</value>
+				<value>com/jplms/basedata/po/JpClerkFinCodePO.hbm.xml</value>
+				<value>com/jplms/basedata/po/JpSubjectCodePO.hbm.xml</value>
+				<!-- 提示消息 -->
+				<value>com/jplms/basedata/po/JpWarnMsgPO.hbm.xml</value>
+				<!-- 支付结算单位 -->
+				<value>com/jplms/basedata/po/JpPayUnitPO.hbm.xml</value>
+				
+				<!-- 出口  进口  海铁联运  -->
+				<!-- 工作单 -->
+				<value>com/jplms/workorder/po/JpBillTotalPO.hbm.xml</value>
+				<value>com/jplms/workorder/po/JpSailingInfoPO.hbm.xml</value>
+				<!-- 代收款 -->
+				<value>com/jplms/workorder/po/JpGeneCollePO.hbm.xml</value>
+				<!-- 集装箱 -->
+				<value>com/jplms/workorder/po/JpContainerTotalPO.hbm.xml</value>
+				<!-- 集装箱费用 -->
+				<value>com/jplms/workorder/po/JpContainerFeePO.hbm.xml</value>
+				<!-- 申请拖车委托单 -->
+				<value>com/jplms/workorder/po/JpApplyEntrustPO.hbm.xml</value>
+				<!-- 毛利调整 -->
+				<value>com/jplms/finance/po/JpGrossProfitPO.hbm.xml</value>
+				<!-- 客户管理 -->
+				<value>com/jplms/customer/po/JpCusInfoPO.hbm.xml</value>
+				<value>com/jplms/customer/po/JpCusFinPO.hbm.xml</value>
+				<!-- 发送日志记录 -->
+				<value>com/jplms/workorder/po/JpSailMsgLogPO.hbm.xml</value>
+				
+				
+				<!-- 车队部分 -->
+				<value>com/jplms/carteam/po/JpcComUnitPO.hbm.xml</value>
+				<value>com/jplms/carteam/po/JpcBusiUserPO.hbm.xml</value>
+				<value>com/jplms/carteam/po/JpcTraDelegationPO.hbm.xml</value>
+				<value>com/jplms/carteam/po/JpcPayFeePO.hbm.xml</value>
+				<value>com/jplms/carteam/po/JpcGeneCollePO.hbm.xml</value>
+				<value>com/jplms/carteam/po/JpcFinacePayPO.hbm.xml</value>
+				<value>com/jplms/carteam/po/JpcFinaceIncomePO.hbm.xml</value>
+				<value>com/jplms/carteam/po/JpcDriverPO.hbm.xml</value>
+				<!-- 驳船部分 -->
+				<value>com/jplms/barge/po/JpbShipCmpPO.hbm.xml</value>
+				<value>com/jplms/barge/po/JpbBargeSiteInfoPO.hbm.xml</value>
+				<value>com/jplms/barge/po/JpbBargeUserPO.hbm.xml</value>
+				<value>com/jplms/barge/po/JpbCusInfoPO.hbm.xml</value>
+				<value>com/jplms/barge/po/JpbHeaConWarPO.hbm.xml</value>
+				<value>com/jplms/barge/po/JpbSailInfoPO.hbm.xml</value>
+				<value>com/jplms/barge/po/JpbSailDatePO.hbm.xml</value>
+				<value>com/jplms/barge/po/JpbBoxTubeInfoPO.hbm.xml</value>
+				<value>com/jplms/barge/po/JpbDelegaPO.hbm.xml</value>
+				<value>com/jplms/barge/po/JpbPayFeePO.hbm.xml</value>
+				<value>com/jplms/barge/po/JpbBoxTubeMgrPO.hbm.xml</value>
+				<value>com/jplms/barge/po/JpbGrossProfitPO.hbm.xml</value>
+				<value>com/jplms/barge/po/JpbFinancePayPO.hbm.xml</value>
+				<value>com/jplms/barge/po/JpbBargeBoat.hbm.xml</value>
+				
+				<!-- 文件导入时的临时表 -->
+				<value>com/jplms/barge/po/JpbDelegaTempPO.hbm.xml</value>
+				<value>com/jplms/barge/po/JpbPayFeeTempPO.hbm.xml</value>
+				<!-- 财务管理 -->
+				<value>com/jplms/finance/po/JpBillFinacePayPO.hbm.xml</value>
+				<value>com/jplms/finance/po/FreightApply.hbm.xml</value>
+				<value>com/jplms/finance/po/JpChangeMoneyPO.hbm.xml</value>
+				<value>com/jplms/finance/po/JpChangePayDetailPO.hbm.xml</value>
+				<value>com/jplms/finance/po/JpFinVoucherTempPO.hbm.xml</value>
+				<value>com/jplms/finance/po/JpFinVoucherExportPO.hbm.xml</value>
+				<!-- 行政人事 -->
+				<value>com/jplms/hr/po/JpHrEmployeePO.hbm.xml</value>
+				<value>com/jplms/hr/po/JpHrOrgPO.hbm.xml</value>
+				<value>com/jplms/hr/po/JPhREmpPosHisPO.hbm.xml</value>
+				
+				<!-- sql-->
+				<value>com/jplms/workorder/po/sql.xml</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>    
+                <prop key="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.format_sql">true</prop>
+				<prop key="hibernate.query.substitutions">true 'Y', false 'N'</prop>
+				<prop key="hibernate.jdbc.fetch_size">1</prop>
+				<prop key="hibernate.jdbc.batch_size">30</prop>
+				<prop key="hibernate.jdbc.use_scrollable_resultset">true</prop>
+				<prop key="hibernate.bytecode.use_reflection_optimizer">false</prop>
+				<prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+				<prop key="hibernate.cache.provider_configuration_file_resource_path">/ehcache.xml</prop>
+				<prop key="hibernate.cache.use_second_level_cache">true</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="springBeanFactoryAware" class="com.imti.framework.web.environment.SpringBeanFactoryAware">
+	</bean>
+</beans>

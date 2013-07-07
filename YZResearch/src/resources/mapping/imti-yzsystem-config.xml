@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vo-po-mapping>
+	<!-- 系统参数 -->
+	<class voClass="com.yzsystem.sysparam.vo.SysParamVO" poClass="com.yzsystem.sysparam.po.SysParamPO"> 
+		<property voProperty="paramId" poProperty="paramId"  voType="integer" poType="integer"  primary="true"/>
+		<property voProperty="paramModuleCode" poProperty="paramModuleCode"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="paramModuleName" poProperty="paramModuleName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="paramCode" poProperty="paramCode"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="paramName" poProperty="paramName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="paramValue" poProperty="paramValue"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="displayIndex" poProperty="displayIndex"  voType="short" poType="short"  primary="false"/>
+		<property voProperty="paramRemark" poProperty="paramRemark"  voType="String" poType="String"  primary="false"/>
+	</class>
+	<!-- 主办单位 -->
+	<class voClass="com.yzsystem.exhibitions.vo.HostunitVO" poClass="com.yzsystem.exhibitions.po.HostunitPO"> 
+		<property voProperty="hostUnitId" poProperty="hostUnitId"  voType="String" poType="String"  primary="true"/>
+		<property voProperty="hostUnitName" poProperty="hostUnitName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="postalcode" poProperty="postalcode"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="address" poProperty="address"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="contact" poProperty="contact"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="postName" poProperty="postName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="telephone" poProperty="telephone"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="contactEmail" poProperty="contactEmail"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="officeTel" poProperty="officeTel"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="officeFax" poProperty="officeFax"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="webSite" poProperty="webSite"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="remark" poProperty="remark"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="enterUser" poProperty="enterUser"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="enterDate" poProperty="enterDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="lastModifyUser" poProperty="lastModifyUser"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="lastModifyDate" poProperty="lastModifyDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="delFlag" poProperty="delFlag"  voType="String" poType="int"  primary="false"/>
+	</class>
+	<!-- 行政人事 -->
+	<class voClass="com.yzsystem.hr.vo.HrOrgVO" poClass="com.yzsystem.hr.po.HrOrgPO"> 
+		<property voProperty="orgId" poProperty="orgId"  voType="String" poType="String"  primary="true"/>
+		<property voProperty="orgName" poProperty="orgName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="orgCode" poProperty="orgCode"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="orgParentId" poProperty="orgParentId"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="memo" poProperty="memo"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="address" poProperty="address"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="tel" poProperty="tel"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="fax" poProperty="fax"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="orgParentName" poProperty="orgParentName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="delFlag" poProperty="delFlag"  voType="int" poType="int"  primary="false"/>
+	</class>
+	<class voClass="com.yzsystem.hr.vo.HrEmployeeVO" poClass="com.yzsystem.hr.po.HrEmployeePO"> 
+		<property voProperty="employeeId" poProperty="employeeId"  voType="String" poType="String"  primary="true"/>
+		<property voProperty="employeeNo" poProperty="employeeNo"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="employeeName" poProperty="employeeName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="employeeSex" poProperty="employeeSex"  voType="String" poType="short"  primary="false"/>
+		<property voProperty="employeeBirthType" poProperty="employeeBirthType"  voType="String" poType="short"  primary="false"/>
+		<property voProperty="employeeBirth" poProperty="employeeBirth"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="employeePostName" poProperty="employeePostName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="employeeState" poProperty="employeeState"  voType="String" poType="short"  primary="false"/>
+		<property voProperty="entryJobDate" poProperty="entryJobDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="contractStartDate" poProperty="contractStartDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="contractEndDate" poProperty="contractEndDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="offJobDate" poProperty="offJobDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="identification" poProperty="identification"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="contact" poProperty="contact"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="contactTel" poProperty="contactTel"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="memo" poProperty="memo"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="homeAddress" poProperty="homeAddress"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="accountType" poProperty="accountType"  voType="String" poType="short"  primary="false"/>
+		<property voProperty="hasBuyShebao" poProperty="hasBuyShebao"  voType="String" poType="short"  primary="false"/>
+		<property voProperty="graduateDate" poProperty="graduateDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="graduateSch" poProperty="graduateSch"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="education" poProperty="education"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="profession" poProperty="profession"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="orgId" poProperty="org.orgId"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="orgName" poProperty="org.orgParentName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="groupName" poProperty="org.orgName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="orgParentId" poProperty="org.orgParentId"  voType="String" poType="String"  primary="false"/>
+	</class>
+	<class voClass="com.yzsystem.hr.vo.HrEmpPosHisVO" poClass="com.yzsystem.hr.po.HrEmpPosHisPO"> 
+		<property voProperty="empPosHisId" poProperty="empPosHisId"  voType="String" poType="String"  primary="true"/>
+		<property voProperty="startDate" poProperty="startDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="endDate" poProperty="endDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="position" poProperty="position"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="remark" poProperty="remark"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="hrOrgId" poProperty="orgId"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="hrEmployeeId" poProperty="hrEmployeeId"  voType="String" poType="String"  primary="false"/>
+	</class>
+	<!-- 翻译模板 -->
+	<class voClass="com.yzsystem.exhibitions.vo.ExhProModuleVO" poClass="com.yzsystem.exhibitions.po.ExhProModulePO"> 
+		<property voProperty="exhProModuleId" poProperty="exhProModuleId"  voType="integer" poType="integer"  primary="true"/>
+		<property voProperty="exhProId" poProperty="exhProId"  voType="String" poType="Integer"  primary="false"/>
+		<property voProperty="charges" poProperty="charges"  voType="String" poType="BigDecimal"  primary="false"/>
+		<property voProperty="measurementUnits" poProperty="measurementUnits"  voType="String" poType="int"  primary="false"/>
+		<property voProperty="lockStatus" poProperty="lockStatus"  voType="String" poType="Short"  primary="false"/>
+		<property voProperty="operator" poProperty="operator"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="operateDate" poProperty="operateDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="paramId" poProperty="moduleItem.paramId"  voType="integer" poType="integer"  primary="false"/>
+		<property voProperty="paramValue" poProperty="moduleItem.paramValue"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="paramRemark" poProperty="moduleItem.paramRemark"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="paramRemark" poProperty="moduleItem.paramRemark"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="paramCode" poProperty="moduleItem.paramCode"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="paramName" poProperty="moduleItem.paramName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="displayIndex" poProperty="moduleItem.displayIndex"  voType="Short" poType="Short"  primary="false"/>
+	</class>
+	<!-- 企业资料 -->
+	<class voClass="com.yzsystem.crm.vo.EnterpriseVO" poClass="com.yzsystem.crm.po.EnterprisePO"> 
+		<property voProperty="enterpriseId" poProperty="enterpriseId"  voType="Integer" poType="Integer"  primary="true"/>
+		<property voProperty="enterpriseName" poProperty="enterpriseName"  voType="String" poType="String"  primary="false"/>
+	</class>
+	<!-- 展会项目 -->
+	<class voClass="com.yzsystem.exhibitions.vo.ExhibitionProjectVO" poClass="com.yzsystem.exhibitions.po.ExhibitionProjectPO"> 
+		<property voProperty="exhProId" poProperty="exhProId"  voType="Integer" poType="Integer"  primary="true"/>
+		<property voProperty="exhProChzName" poProperty="exhProChzName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="exhProNo" poProperty="exhProNo"  voType="String" poType="String"  primary="false"/>
+	</class>
+	<!-- 参展企业 -->
+	<class voClass="com.yzsystem.exhibitions.vo.ExhibitionEnterpriseVO" poClass="com.yzsystem.exhibitions.po.ExhibitionEnterprisePO"> 
+		<property voProperty="exhEnterpriseId" poProperty="exhEnterpriseId"  voType="Integer" poType="Integer"  primary="true"/>
+		<property voProperty="enterpriseId" poProperty="enterprise.enterpriseId"  voType="Integer" poType="Integer"  primary="false"/>
+		<property voProperty="enterpriseName" poProperty="enterprise.enterpriseName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="exhProId" poProperty="exhPro.exhProId"  voType="Integer" poType="Integer"  primary="false"/>
+		<property voProperty="exhProNo" poProperty="exhPro.exhProNo"  voType="String" poType="String"  primary="false"/>
+	</class>
+	<!-- 人员 -->
+	<class voClass="com.yzsystem.tperson.vo.TPersonVO" poClass="com.yzsystem.tperson.po.TPersonPO"> 
+		<property voProperty="personId" poProperty="personId"  voType="Integer" poType="Integer"  primary="true"/>
+		<property voProperty="personName" poProperty="personName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="inTime" poProperty="inTime"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="modTime" poProperty="modTime"  voType="String" poType="String"  primary="false"/>
+	</class>
+	<class voClass="com.yzsystem.tresearch.vo.PassengerVO" poClass="com.yzsystem.tresearch.po.PassengerPO"> 
+		<property voProperty="uid" poProperty="uid"  voType="String" poType="Integer"  primary="true"/>
+		<property voProperty="uname" poProperty="uname"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="usex" poProperty="usex"  voType="String" poType="Integer"  primary="false"/>
+		<property voProperty="ucompany" poProperty="ucompany"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="uroom" poProperty="uroom"  voType="String" poType="String"  primary="false"/>
+	</class>
+	<class voClass="com.yzsystem.tresearch.vo.ExhComVO" poClass="com.yzsystem.tresearch.po.ExhComPO"> 
+		<property voProperty="ecid" 	poProperty="ecid"  				voType="String" poType="Integer"  primary="true"/>
+		<property voProperty="cid" 		poProperty="companyPO.cid"  	voType="String" poType="Integer"  primary="false"/>
+		<property voProperty="cname" 	poProperty="companyPO.cname"  	voType="String" poType="String"  primary="false"/>
+		<property voProperty="eid" 		poProperty="exhibitionPO.eid"  	voType="String" poType="Integer"  primary="false"/>
+		<property voProperty="ename" 	poProperty="exhibitionPO.ename"	voType="String" poType="String"  primary="false"/>
+		<property voProperty="eno"		poProperty="exhibitionPO.eno"	voType="String" poType="String"  primary="false"/>
+		<property voProperty="remark" 	poProperty="remark"  			voType="String" poType="String"  primary="false"/>
+	</class>
+	<class voClass="com.yzsystem.tresearch.vo.AbroadPersonVO" poClass="com.yzsystem.tresearch.po.AbroadPersonPO"> 
+		<property voProperty="apid" poProperty="apid"  voType="String" poType="Integer"  primary="true"/>
+		<property voProperty="cid" 		poProperty="companyPO.cid"  	voType="String" poType="Integer"  primary="false"/>
+		<property voProperty="cname" 	poProperty="companyPO.cname"  	voType="String" poType="String"  primary="false"/>
+		<property voProperty="eid" 		poProperty="exhibitionPO.eid"  	voType="String" poType="Integer"  primary="false"/>
+		<property voProperty="ename" 	poProperty="exhibitionPO.ename"	voType="String" poType="String"  primary="false"/>
+		<property voProperty="eno"		poProperty="exhibitionPO.eno"	voType="String" poType="String"  primary="false"/>
+		<property voProperty="apaddress" poProperty="apaddress"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="apname" poProperty="apname"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="apspell" poProperty="apspell"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="apsex" poProperty="apsex"  voType="String" poType="Integer"  primary="false"/>
+		<property voProperty="apmstate" poProperty="apmstate"  voType="String" poType="Integer"  primary="false"/>
+		<property voProperty="apduties" poProperty="apduties"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="apbirthday" poProperty="apbirthday"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="apborn" poProperty="apborn"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="aptel" poProperty="aptel"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="apmobile" poProperty="apmobile"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="apfax" poProperty="apfax"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="apcardno" poProperty="apcardno"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="appasstype" poProperty="appasstype"  voType="String" poType="Integer"  primary="false"/>
+		<property voProperty="appassno" poProperty="appassno"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="appassdate" poProperty="appassdate"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="aptriptype" poProperty="aptriptype"  voType="String" poType="Integer"  primary="false"/>
+		<property voProperty="apdeparture" poProperty="apdeparture"  voType="String" poType="Integer"  primary="false"/>
+		<property voProperty="aproomtype" poProperty="aproomtype"  voType="String" poType="Integer"  primary="false"/>
+	</class>	
+</vo-po-mapping>

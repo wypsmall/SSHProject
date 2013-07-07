@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.imti.sysmgr.po.SysRoleRightPO" table="IMTI_SYS_ROLE_RIGHT">
+        <id name="id" column="FID" type="java.lang.String">
+            <generator class="uuid"/>
+        </id>
+        <property name="roleId"  type="string" update="true" insert="true"  column="FROLE_ID" length="32"/>
+		<property name="operatorId" type="string" update="true" insert="true"  column="FOPERATOR_ID" length="32"/>
+		<property name="rightType" type="string" update="true" insert="true"  column="FRIGHT_TYPE" length="1"/>
+    	<property name="ztId" type="string" update="true" insert="true"  column="ZT_ID" length="100"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+  xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+	
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mappingResources">
+			<list>
+				<value>com/imti/sysmgr/po/LoginLogPO.hbm.xml</value>
+				<value>com/imti/sysmgr/po/SysOperatorPO.hbm.xml</value>
+				<value>com/imti/sysmgr/po/SysResourcePO.hbm.xml</value>
+				<value>com/imti/sysmgr/po/SysRoleRightPO.hbm.xml</value>
+				<value>com/imti/sysmgr/po/SysRolePO.hbm.xml</value>
+				<value>com/imti/sysmgr/po/OrgPO.hbm.xml</value>
+				<value>com/imti/sysmgr/po/UserPO.hbm.xml</value>
+				<value>com/imti/sysmgr/po/WarnPO.hbm.xml</value>
+				<!-- 粤召 -->
+				<value>com/yzsystem/sysparam/po/SysParamPO.hbm.xml</value>
+				<value>com/yzsystem/hr/po/HrEmployeePO.hbm.xml</value>
+				<value>com/yzsystem/hr/po/HrEmpPosHisPO.hbm.xml</value>
+				<value>com/yzsystem/hr/po/HrOrgPO.hbm.xml</value>
+				<value>com/yzsystem/crm/po/EnterprisePO.hbm.xml</value>
+				<value>com/yzsystem/exhibitions/po/HostunitPO.hbm.xml</value>
+				<value>com/yzsystem/exhibitions/po/ExhibitionProjectPO.hbm.xml</value>
+				<value>com/yzsystem/exhibitions/po/ExhProModulePO.hbm.xml</value>
+				<!-- 学习 -->
+				<value>com/yzsystem/tperson/po/TPersonPO.hbm.xml</value>
+				<value>com/yzsystem/tresearch/po/PassengerPO.hbm.xml</value>
+				<value>com/yzsystem/tresearch/po/AbroadPersonPO.hbm.xml</value>
+				<value>com/yzsystem/tresearch/po/FlowPO.hbm.xml</value>
+				<value>com/yzsystem/tresearch/po/FlowPOQuery.hbm.xml</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>    
+                <prop key="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.format_sql">true</prop>
+				<prop key="hibernate.query.substitutions">true 'Y', false 'N'</prop>
+				<prop key="hibernate.jdbc.use_scrollable_resultset">true</prop>
+				<prop key="hibernate.bytecode.use_reflection_optimizer">false</prop>
+				<prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+				<prop key="hibernate.cache.provider_configuration_file_resource_path">/ehcache.xml</prop>
+				<prop key="hibernate.cache.use_second_level_cache">true</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="springBeanFactoryAware" class="com.imti.framework.web.environment.SpringBeanFactoryAware">
+	</bean>
+	
+</beans>

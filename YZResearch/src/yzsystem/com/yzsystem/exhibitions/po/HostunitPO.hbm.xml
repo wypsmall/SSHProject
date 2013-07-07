@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.yzsystem.exhibitions.po.HostunitPO" table="YZ_HOST_UNIT">
+        <id name="hostUnitId" column="HUNITID" type="java.lang.String">
+            <generator class="uuid"/>
+        </id>
+		<property name="hostUnitName" type="string" update="true" insert="true"  column="HOSTUNITNAME" />
+		<property name="postalcode" type="string" update="true" insert="true"  column="POSTALCODE" />
+		<property name="address" type="string" update="true" insert="true"  column="ADDRESS" />
+		<property name="contact" type="string" update="true" insert="true"  column="CONTACT"/>
+    	<property name="postName" type="string" update="true" insert="true"  column="POSTNAME" />
+    	<property name="telephone" type="string" update="true" insert="true"  column="TELEPHONE"/>
+    	<property name="contactEmail" type="string" update="true" insert="true"  column="CONTACTEMAIL" />
+    	<property name="officeTel" type="string" update="true" insert="true"  column="OFFICETEL" />
+    	<property name="officeFax" type="string" update="true" insert="true"  column="OFFICEFAX" />
+    	<property name="webSite" type="string" update="true" insert="true"  column="WEBSITE"/>
+    	<property name="remark" type="string" update="true" insert="true"  column="REMARK" />
+    	<property name="enterUser" type="string" insert="true"  column="ENTERUSER"/>
+    	<property name="enterDate" type="java.util.Date" insert="true"  column="ENTERDATE"/>
+    	<property name="lastModifyUser" type="string" update="true" insert="true"  column="LASTMODIFYUSER" />
+    	<property name="lastModifyDate" type="java.util.Date" update="true" insert="true"  column="LASTMODIFYDATE"/>
+    	<property name="delFlag" type="int" update="true" insert="true"  column="DELFLAG"/>
+    </class>
+</hibernate-mapping>

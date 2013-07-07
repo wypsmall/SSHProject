@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.yzsystem.sysparam.po.SysParamPO" table="YZ_SYS_PARAM">
+        <id name="paramId" column="PARAM_ID" type="java.lang.Integer">
+            <generator class="uuid"/>
+        </id>
+		<property name="paramModuleCode" type="string" update="true" insert="true"  column="PARAM_MODULE_CODE" />
+		<property name="paramModuleName" type="string" update="true" insert="true"  column="PARAM_MODULE_NAME" />
+		<property name="paramCode" type="string" update="true" insert="true"  column="PARAM_CODE" />
+		<property name="paramName" type="string" update="true" insert="true"  column="PARAM_NAME"/>
+    	<property name="paramValue" type="string" update="true" insert="true"  column="PARAM_VALUE" />
+    	<property name="displayIndex" type="short" update="true" insert="true"  column="DISPLAY_INDEX"/>
+    	<property name="paramRemark" type="string" update="true" insert="true"  column="PARAM_REMARK" />
+    </class>
+</hibernate-mapping>

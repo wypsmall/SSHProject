@@ -1,0 +1,19 @@
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+        "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+<tiles-definitions>
+    <definition name="base-definition" path="/pageLayout.jsp">
+        <put name="header" value="top.jsp"/>
+        <put name="leftmenu" value="leftmenu.jsp"/>
+        <put name="content" value="main.jsp"/>
+    </definition>
+
+    <definition name="uiframework.page" path="/uiframework.jsp">
+    </definition>
+
+    <definition name="welcome.index" extends="uiframework.page">
+        <put name="content" value="/welcome.jsp"/>
+    </definition>
+    <definition name="waitTaskList.index" extends="uiframework.page">
+        <put name="content" value="/waitTaskList.jsp"/>
+    </definition>
+</tiles-definitions>

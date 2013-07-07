@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="GBK"?>
+<httpclient>
+	<!-- 登陆文件头信息 -->
+	<header id="gmmc_login_header">
+		<model name="Accept" value="image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, application/x-shockwave-flash, application/vnd.ms-excel, application/vnd.ms-powerpoint, application/msword, */*"/>
+		<model name="Referer" value="http://gmccbi.gmcc.net/gmcc/login.htm"/>
+		<model name="Accept-Language" value="zh-cn"/>
+		<model name="Content-Type" value="application/x-www-form-urlencoded"/>
+		<model name="UA-CPU" value="x86"/>
+		<model name="Accept-Encoding" value="gzip, deflate"/>
+		<model name="User-Agent" value="Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; SV1; .NET CLR 2.0.50727; InfoPath.1; .NET CLR 1.1.4322)"/>
+		<model name="Host" value="gmccbi.gmcc.net"/>
+		<model name="Content-Length" value="90"/>
+		<model name="Connection" value="Keep-Alive"/>
+		<model name="Cache-Control" value="no-cache"/>
+		<model name="Cookie" value="metacenter_username=2Kx967XN0Zf9FMwLSl2zxA==; BIPlanform_DM_Token=a0af490c3012350726a82WB88JOK3d; menuid=1101; BIPlanform_BIEE_Token=a0af490c3012350726a82WB88JOK3d; Portal_Token=7WtM/aTg9OgJU499SxYD0A==; BIPlanform_SZ_BIEE_Token=a0af490c3012350726a82WB88JOK3d; JSESSIONID=0000KAiSH2OINl9_zeFdGKV2r3i:13qlk3h45"/>
+	</header>
+	
+</httpclient>

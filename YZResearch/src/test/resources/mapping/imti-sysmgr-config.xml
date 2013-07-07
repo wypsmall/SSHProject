@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vo-po-mapping>
+	
+	<class voClass="com.imti.sysmgr.vo.LoginLogVO" poClass="com.imti.sysmgr.po.LoginLogPO">
+	    <property voProperty="id" poProperty="id" voType="String" poType="String" primary="true"/>
+	    <property voProperty="loginId" poProperty="loginId" voType="String" poType="String" primary="false"/>
+	    <property voProperty="userName" poProperty="userName" voType="String" poType="String" primary="false"/>
+	    <property voProperty="loginIP" poProperty="loginIP" voType="String" poType="String" primary="false"/>
+	    <property voProperty="loginTime" poProperty="loginTime" voType="String" poType="timestamp" primary="false"/>
+	    <property voProperty="type" poProperty="type" voType="String" poType="String" primary="false"/>
+	    <property voProperty="loginSuccess" poProperty="loginSuccess" voType="String" poType="String" primary="false"/>
+	</class>
+<!--	<class voClass="com.imti.compenent.vopomapping.vo.UserVO" poClass="com.imti.compenent.vopomapping.po.UserPO">-->
+<!--	    <property voProperty="loginId" poProperty="loginId" voType="String" poType="String" primary="false"/>-->
+<!--	    <property voProperty="nickName" poProperty="nickName" voType="String" poType="String" primary="false"/>-->
+<!--	    <property voProperty="password" poProperty="password" voType="String" poType="String" primary="false"/>-->
+<!--	    <property voProperty="addressNo" poProperty="address.no" voType="String" poType="String" primary="false"/>-->
+<!--		<one-one voProperty="addressVO" poProperty="address" -->
+<!--			voClass="com.jdnis.compenent.vopomapping.vo.AddressVO" -->
+<!--			poClass="com.jdnis.compenent.vopomapping.po.AddressPO" />-->
+<!--		<many-many voProperty="addressSet" poProperty="addressSet" -->
+<!--			voClass="com.jdnis.compenent.vopomapping.vo.AddressVO" -->
+<!--			poClass="com.jdnis.compenent.vopomapping.po.AddressPO" />-->
+<!--	</class>-->
+	<!-- 资源 -->
+	<class voClass="com.imti.sysmgr.vo.SysResourceVO" poClass="com.imti.sysmgr.po.SysResourcePO">
+	    <property voProperty="id" poProperty="id" voType="String" poType="String" primary="true"/>
+	    <property voProperty="parentId" poProperty="parentId" voType="String" poType="String" primary="false"/>
+	    <property voProperty="name" poProperty="name" voType="String" poType="String" primary="false"/>
+	    <property voProperty="code" poProperty="code" voType="String" poType="String" primary="false"/>
+	    <property voProperty="level" poProperty="level" voType="int" poType="int" primary="false"/>
+	    <property voProperty="displayIndex" poProperty="displayIndex" voType="int" poType="int" primary="false"/>
+	    <property voProperty="imgUrl" poProperty="imgUrl" voType="String" poType="String" primary="false"/>
+	    <property voProperty="url" poProperty="url" voType="String" poType="String" primary="false"/>
+	    <property voProperty="validFlag" poProperty="validFlag" voType="String" poType="String" primary="false"/>
+	    <property voProperty="memo" poProperty="memo" voType="String" poType="String" primary="false"/>
+	    <property voProperty="rsPath" poProperty="rsPath" voType="String" poType="String" primary="false"/>
+	</class>
+	
+	<!-- 操作 -->
+	<class voClass="com.imti.sysmgr.vo.SysOperatorVO" poClass="com.imti.sysmgr.po.SysOperatorPO">
+	    <property voProperty="id" poProperty="id" voType="String" poType="String" primary="true"/>
+	    <property voProperty="name" poProperty="name" voType="String" poType="String" primary="false"/>
+	    <property voProperty="code" poProperty="code" voType="String" poType="String" primary="false"/>
+	    <property voProperty="rsId" poProperty="rsId" voType="String" poType="String" primary="false"/>
+	    <property voProperty="displayIndex" poProperty="displayIndex" voType="int" poType="int" primary="false"/>
+	    <property voProperty="url" poProperty="url" voType="String" poType="String" primary="false"/>
+	    <property voProperty="memo" poProperty="memo" voType="String" poType="String" primary="false"/>
+	</class>
+	
+	<!-- 角色权限 -->
+	<class voClass="com.imti.sysmgr.vo.SysRoleRightVO" poClass="com.imti.sysmgr.po.SysRoleRightPO">
+	    <property voProperty="id" poProperty="id" voType="String" poType="String" primary="true"/>
+	    <property voProperty="roleId" poProperty="roleId" voType="String" poType="String" primary="false"/>
+	    <property voProperty="operatorId" poProperty="operatorId" voType="String" poType="String" primary="false"/>
+	    <property voProperty="rightType" poProperty="rightType" voType="String" poType="String" primary="false"/>
+	</class>
+	
+	<!-- 角色 -->
+	<class voClass="com.imti.sysmgr.vo.SysRoleVO" poClass="com.imti.sysmgr.po.SysRolePO">
+	    <property voProperty="id" poProperty="id" voType="String" poType="String" primary="true"/>
+	    <property voProperty="roleName" poProperty="roleName" voType="String" poType="String" primary="false"/>
+	    <property voProperty="roleCode" poProperty="roleCode" voType="String" poType="String" primary="false"/>
+	    <property voProperty="roleMemo" poProperty="roleMemo" voType="String" poType="String" primary="false"/>
+	</class>
+	<!-- 部门基本信息 -->
+	<class voClass="com.imti.sysmgr.vo.OrgVO" poClass="com.imti.sysmgr.po.OrgPO">
+	    <property voProperty="orgId" poProperty="orgId" voType="String" poType="String" primary="true"/>
+	    <property voProperty="orgName" poProperty="orgName" voType="String" poType="String" primary="false"/>
+	    <property voProperty="orgCode" poProperty="orgCode" voType="String" poType="String" primary="false"/>
+	    <property voProperty="orgParentId" poProperty="orgParentId" voType="String" poType="String" primary="false"/>
+	    <property voProperty="orgParentCode" poProperty="orgParentCode" voType="String" poType="String" primary="false"/>
+	    <property voProperty="orgParentName" poProperty="orgParentName" voType="String" poType="String" primary="false"/>
+	    <property voProperty="memo" poProperty="memo" voType="String" poType="String" primary="false"/>
+	    <property voProperty="type" poProperty="type" voType="String" poType="String" primary="false"/>	
+	</class>
+	
+	<!-- 用户信息 -->
+	<class voClass="com.imti.sysmgr.vo.UserVO" poClass="com.imti.sysmgr.po.UserPO">
+	    <property voProperty="id" poProperty="id" voType="String" poType="String" primary="true"/>
+	    <property voProperty="loginId" poProperty="loginId" voType="String" poType="String" primary="false"/>
+	    <property voProperty="password" poProperty="password" voType="String" poType="String" primary="false"/>
+	    <property voProperty="userNick" poProperty="userNick" voType="String" poType="String" primary="false"/>
+	    <property voProperty="companyCode" poProperty="companyCode" voType="String" poType="String" primary="false"/>
+	    <property voProperty="userName" poProperty="userName" voType="String" poType="String" primary="false"/>
+	    <property voProperty="valid" poProperty="valid" voType="String" poType="String" primary="false"/>
+	    <property voProperty="orgId" poProperty="orgId" voType="String" poType="String" primary="false"/>
+	    <property voProperty="orgName" poProperty="orgName" voType="String" poType="String" primary="false"/>
+	    <property voProperty="loginType" poProperty="loginType" voType="String" poType="String" primary="false"/>
+	    <property voProperty="userType" poProperty="userType" voType="String" poType="String" primary="false"/>
+	    <property voProperty="finCode" poProperty="finCode" voType="String" poType="String" primary="false"/>
+	    <many-many voProperty="roleSet" poProperty="roleSet" 
+			voClass="com.jdnis.compenent.vopomapping.vo.SysRoleVO" 
+			poClass="com.jdnis.compenent.vopomapping.po.SysRolePO" />
+		<many-many voProperty="orgSet" poProperty="orgSet" 
+			voClass="com.jdnis.compenent.vopomapping.vo.OrgVO" 
+			poClass="com.jdnis.compenent.vopomapping.po.OrgPO" />
+	</class>
+	<!-- 系统错误内容收集 -->
+	<class voClass="com.imti.sysmgr.vo.WarnVO" poClass="com.imti.sysmgr.po.WarnPO">
+	    <property voProperty="id" poProperty="id" voType="String" poType="String" primary="true"/>
+	    <property voProperty="createDate" poProperty="createDate" voType="String" poType="date" primary="false"/>
+	    <property voProperty="isHandle" poProperty="isHandle" voType="String" poType="String" primary="false"/>
+	    <property voProperty="content" poProperty="content" voType="String" poType="String" primary="false"/>
+	    <property voProperty="operator" poProperty="operator" voType="String" poType="String" primary="false"/>
+	</class>
+</vo-po-mapping>

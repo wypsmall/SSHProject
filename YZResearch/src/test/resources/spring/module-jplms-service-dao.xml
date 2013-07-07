@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+  xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd" default-autowire="byName">
+	<!-- 用户管理适配 -->
+	<bean id="adapterSysMgrDao" class="com.adapter.imti.sysmgr.dao.impl.AdapterSysMgrDaoImpl" />
+	<bean id="adapterSysMgrService" class="com.adapter.imti.sysmgr.service.impl.AdapterSysMgrServiceImpl" />
+	
+	<!-- 弹出提示框 -->
+	<bean id="jpWarnMsgDao" class="com.jplms.basedata.dao.impl.JpWarnMsgDaoImpl" />
+	<bean id="jpWarnMsgService" class="com.jplms.basedata.service.impl.JpWarnMsgServiceImpl" />
+	<!-- 港口管理 -->
+	<bean id="portDao" class="com.jplms.basedata.dao.impl.PortDaoImpl" />
+	<bean id="portService" class="com.jplms.basedata.service.impl.PortServiceImpl" />
+	<!-- 商品管理 -->
+	<bean id="merchandiseDao" class="com.jplms.basedata.dao.impl.MerchandiseDaoImpl" />
+	<bean id="merchandiseService" class="com.jplms.basedata.service.impl.MerchandiseServiceImpl" />
+	<!-- 工作单类型 -->
+	<bean id="jpWorkOrderTypeDao" class="com.jplms.basedata.dao.impl.JpWorkOrderTypeDaoImpl" />
+	<bean id="jpWorkOrderTypeService" class="com.jplms.basedata.service.impl.JpWorkOrderTypeServiceImpl" />
+	<!-- 用户类型 -->
+	<bean id="jpUserTypeDao" class="com.jplms.basedata.dao.impl.JpUserTypeDaoImpl" />
+	<bean id="jpUserTypeService" class="com.jplms.basedata.service.impl.JpUserTypeServiceImpl" />
+	<!-- 合作伙伴 -->
+	<bean id="jpPartnerDao" class="com.jplms.basedata.dao.impl.JpPartnerDaoImpl" />
+	<bean id="jpPartnerService" class="com.jplms.basedata.service.impl.JpPartnerServiceImpl" />
+	<!-- 保险公司 -->
+	<bean id="jpInsuranceInfoDao" class="com.jplms.basedata.dao.impl.JpInsuranceInfoDaoImpl" />
+	<bean id="jpInsuranceInfoService" class="com.jplms.basedata.service.impl.JpInsuranceInfoServiceImpl" />
+	<!-- 保险公司 -->
+	<bean id="jpSysLogDao" class="com.jplms.basedata.dao.impl.JpSysLogDaoImpl" />
+	<bean id="jpSysLogService" class="com.jplms.basedata.service.impl.JpSysLogServiceImpl" />
+	<!-- 科目代码 -->
+	<bean id="jpSubjectCodeDao" class="com.jplms.basedata.dao.impl.JpSubjectCodeDaoImpl" />
+	<bean id="jpSubjectCodeService" class="com.jplms.basedata.service.impl.JpSubjectCodeServiceImpl" />
+
+	<!-- 客户管理 -->
+	<bean id="customerDao" class="com.jplms.customer.dao.impl.CustomerDaoImpl" />
+	<bean id="customerService" class="com.jplms.customer.service.impl.CustomerServiceImpl" />
+	<!-- 支付结算单位 -->
+	<bean id="jpPayUnitDao" class="com.jplms.basedata.dao.impl.JpPayUnitDaoImpl" />
+	<bean id="jpPayUnitService" class="com.jplms.basedata.service.impl.JpPayUnitServiceImpl" />
+	
+
+
+	<!-- 工作单管理 begin -->
+	<!-- 出口操作 -->	
+	<bean id="exportDao" class="com.jplms.workorder.dao.impl.ExportDaoImpl" />
+	<bean id="exportService" class="com.jplms.workorder.service.impl.ExportServiceImpl" />
+	<!-- 船期维护 -->	
+	<bean id="sailDao" class="com.jplms.workorder.dao.impl.SailDaoImpl" />
+	<bean id="sailService" class="com.jplms.workorder.service.impl.SailServiceImpl" />
+	<!-- 海铁联运操作 -->	
+	<bean id="sailrailwayDao" class="com.jplms.workorder.dao.impl.SailrailwayDaoImpl" />
+	<bean id="sailrailwayService" class="com.jplms.workorder.service.impl.SailrailwayServiceImpl" />
+	<!-- 进口操作 -->	
+	<bean id="importDao" class="com.jplms.workorder.dao.impl.ImportDaoImpl" />
+	<bean id="importService" class="com.jplms.workorder.service.impl.ImportServiceImpl" />
+	<!-- 申请拖车 -->	
+	<bean id="applyCarDao" class="com.jplms.workorder.dao.impl.ApplyCarDaoImpl" />
+	<bean id="applyCarService" class="com.jplms.workorder.service.impl.ApplyCarServiceImpl" />
+	<!-- 工作单管理 end-->	
+
+	<!-- 车队管理 -->
+	<bean id="jpcComUnitDao" class="com.jplms.carteam.dao.impl.JpcComUnitDaoImpl" />
+	<bean id="jpcComUnitService" class="com.jplms.carteam.service.impl.JpcComUnitServiceImpl" />
+	<bean id="jpcBusiUserDao" class="com.jplms.carteam.dao.impl.JpcBusiUserDaoImpl" />
+	<bean id="jpcBusiUserService" class="com.jplms.carteam.service.impl.JpcBusiUserServiceImpl" />
+	<bean id="jpcTraDelegationDao" class="com.jplms.carteam.dao.impl.JpcTraDelegationDaoImpl" />
+	<bean id="jpcTraDelegationService" class="com.jplms.carteam.service.impl.JpcTraDelegationServiceImpl" />
+	<bean id="jpcPayFeeDao" class="com.jplms.carteam.dao.impl.JpcPayFeeDaoImpl" />
+	<bean id="jpcPayFeeService" class="com.jplms.carteam.service.impl.JpcPayFeeServiceImpl" />
+	<bean id="jpcGeneColleDao" class="com.jplms.carteam.dao.impl.JpcGeneColleDaoImpl" />
+	<bean id="jpcGeneColleService" class="com.jplms.carteam.service.impl.JpcGeneColleServiceImpl" />
+	<bean id="jpcFinacePayDao" class="com.jplms.carteam.dao.impl.JpcFinacePayDaoImpl" />
+	<bean id="jpcFinacePayService" class="com.jplms.carteam.service.impl.JpcFinacePayServiceImpl" />
+	<bean id="jpcFinaceIncomeDao" class="com.jplms.carteam.dao.impl.JpcFinaceIncomeDaoImpl" />
+	<bean id="jpcFinaceIncomeService" class="com.jplms.carteam.service.impl.JpcFinaceIncomeServiceImpl" />
+	
+	<!-- 驳船管理 -->
+	<bean id="jpbShipCmpDao" class="com.jplms.barge.dao.impl.JpbShipCmpDaoImpl" />
+	<bean id="jpbShipCmpService" class="com.jplms.barge.service.impl.JpbShipCmpServiceImpl" />
+	<bean id="jpbBargeSiteInfoDao" class="com.jplms.barge.dao.impl.JpbBargeSiteInfoDaoImpl" />
+	<bean id="jpbBargeSiteInfoService" class="com.jplms.barge.service.impl.JpbBargeSiteInfoServiceImpl" />
+	<bean id="jpbCusInfoDao" class="com.jplms.barge.dao.impl.JpbCusInfoDaoImpl" />
+	<bean id="jpbCusInfoService" class="com.jplms.barge.service.impl.JpbCusInfoServiceImpl" />
+	<bean id="jpbHeaConWarDao" class="com.jplms.barge.dao.impl.JpbHeaConWarDaoImpl" />
+	<bean id="jpbHeaConWarService" class="com.jplms.barge.service.impl.JpbHeaConWarServiceImpl" />
+	<bean id="jpbSailInfoDao" class="com.jplms.barge.dao.impl.JpbSailInfoDaoImpl" />
+	<bean id="jpbSailInfoService" class="com.jplms.barge.service.impl.JpbSailInfoServiceImpl" />
+	<bean id="jpbDelegaDao" class="com.jplms.barge.dao.impl.JpbDelegaDaoImpl" />
+	<bean id="jpbDelegaService" class="com.jplms.barge.service.impl.JpbDelegaServiceImpl" />
+	<bean id="jpbBoxTubeInfoDao" class="com.jplms.barge.dao.impl.JpbBoxTubeInfoDaoImpl" />
+	<bean id="jpbBoxTubeInfoService" class="com.jplms.barge.service.impl.JpbBoxTubeInfoServiceImpl" />
+	<bean id="jpbBoxTubeMgrDao" class="com.jplms.barge.dao.impl.JpbBoxTubeMgrDaoImpl" />
+	<bean id="jpbBoxTubeMgrService" class="com.jplms.barge.service.impl.JpbBoxTubeMgrServiceImpl" />
+	<bean id="jpbGrossProfitDao" class="com.jplms.barge.dao.impl.JpbGrossProfitDaoImpl" />
+	<bean id="jpbGrossProfitService" class="com.jplms.barge.service.impl.JpbGrossProfitServiceImpl" />
+	<bean id="jpbFinancePayDao" class="com.jplms.barge.dao.impl.JpbFinancePayDaoImpl" />
+	<bean id="jpbFinancePayService" class="com.jplms.barge.service.impl.JpbFinancePayServiceImpl" />
+	<bean id="bargeBoatDao" class="com.jplms.barge.dao.impl.JpbBargeBoatDaoImpl" />
+	<bean id="bargeBoatService" class="com.jplms.barge.service.impl.JpbBargeBoatServiceImpl" />
+	
+	
+	<!-- 报表管理 -->
+	<bean id="reportDao" class="com.jplms.report.dao.impl.ReportDaoImpl" />
+	<bean id="extReportDao" class="com.jplms.report.dao.impl.ExtReportDaoImpl" />
+	<!-- 工作单报表 -->
+	<bean id="billReportDao" class="com.jplms.workorder.dao.impl.ReportDaoImpl" />
+	<!-- 财务管理 BEGIN-->
+	<bean id="billFinaceDao" class="com.jplms.finance.dao.impl.BillFinaceDaoImpl" />
+	<bean id="billFinaceService" class="com.jplms.finance.service.impl.BillFinaceServiceImpl" />
+	
+	<bean id="freightFactory" class="com.jplms.finance.common.FreightFactory" />
+	<bean id="freightApplyDao" class="com.jplms.finance.dao.impl.FreightApplyDaoImpl" />
+	<bean id="freightApplyService" class="com.jplms.finance.service.impl.FreightApplyServiceImpl" />
+	<!--  毛利调整-->
+	<bean id="grossProfitDao" class="com.jplms.finance.dao.impl.GrossProfitDaoImpl" />
+	<bean id="grossProfitService" class="com.jplms.finance.service.impl.GrossProfitServiceImpl" />
+	<!--  费用更改单-->
+	<bean id="jpChangeMoneyDao" class="com.jplms.finance.dao.impl.JpChangeMoneyDaoImpl" />
+	<bean id="jpChangeMoneyService" class="com.jplms.finance.service.impl.JpChangeMoneyServiceImpl" />
+	<!-- 凭证生成 -->
+	<bean id="voucherDao" class="com.jplms.finance.dao.impl.VoucherDaoImpl" />
+	<bean id="voucherService" class="com.jplms.finance.service.impl.VoucherServiceImpl" />
+	<!-- 金蝶新接口 -->
+	<bean id="extVoucherDao" class="com.jplms.finance.dao.impl.ExtVoucherDaoImpl" />
+	<bean id="extVoucherService" class="com.jplms.finance.service.impl.ExtVoucherServiceImpl" />
+	<!-- 行政人事 -->
+	<bean id="hrDao" class="com.jplms.hr.dao.impl.HrDaoImpl"/>
+	<bean id="hrService" class="com.jplms.hr.service.impl.HrServiceImpl" />
+	
+	<bean id="adapterDao" class="com.jplms.workorder.adapter.impl.AdapterDaoImpl"/>
+</beans>

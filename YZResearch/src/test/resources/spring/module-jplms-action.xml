@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+  xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd" default-autowire="byName">
+	<!-- 公共action -->
+	<bean name="/jplms/common/util" class="com.jplms.common.ComboxUtil" />
+	<!-- 弹出框提示 -->
+	<bean name="/jplms/basedata/warn" class="com.jplms.basedata.action.JpWarnMsgAction" />
+	<!-- 港口管理 -->
+	<bean name="/jplms/basedata/port" class="com.jplms.basedata.action.PortAction" />
+	<!-- 商品管理 -->
+	<bean name="/jplms/basedata/merchandise" class="com.jplms.basedata.action.MerchandiseAction" />
+	<!-- 工作单类型管理 -->
+	<bean name="/jplms/basedata/workordertype" class="com.jplms.basedata.action.JpWorkOrderTypeAction" />
+	<!-- 用户类别 -->
+	<bean name="/jplms/basedata/usertype" class="com.jplms.basedata.action.JpUserTypeAction" />
+	<!-- 合作伙伴 -->
+	<bean name="/jplms/basedata/partner" class="com.jplms.basedata.action.JpPartnerAction" />
+	<!-- 保险公司 -->
+	<bean name="/jplms/basedata/insurance" class="com.jplms.basedata.action.JpInsuranceInfoAction" />
+	<!-- -->
+	<bean name="/jplms/basedata/syslog" class="com.jplms.basedata.action.JpSysLogAction" />
+	<!-- 付款结算单位 -->
+	<bean name="/jplms/basedata/payUnit" class="com.jplms.basedata.action.JpPayUnitAction" />
+	<!-- 科目代码 -->
+	<bean name="/jplms/basedata/subjCode" class="com.jplms.basedata.action.JpSubjectCodeAction" />
+
+
+	<!-- 工作单管理 -->
+	<!-- 基础数据 -->
+	<bean name="/jplms/workorder/basedata" class="com.jplms.workorder.action.JpUserTypeAction" />
+	<!-- 出口 -->
+	<bean name="/jplms/workorder/export" class="com.jplms.workorder.action.ExportAction" />
+	<!-- 海铁联运-->
+	<bean name="/jplms/workorder/sailrail" class="com.jplms.workorder.action.SailrailwayAction" />
+	<!-- 进口联运-->
+	<bean name="/jplms/workorder/import" class="com.jplms.workorder.action.ImportAction" />
+	<!-- 进口联运-->
+	<bean name="/jplms/workorder/report" class="com.jplms.workorder.action.ReportAction" />
+	<!-- 船期信息-->
+	<bean name="/jplms/workorder/sail" class="com.jplms.workorder.action.SailAction" />
+	<!-- 申请拖车-->
+	<bean name="/jplms/workorder/applyCar" class="com.jplms.workorder.action.ApplyCarAction" />
+	
+	<!-- 系统管理适配-->
+	<bean name="/jplms/adapter/sysmgr" class="com.adapter.imti.sysmgr.action.SysMgrAdapterAction" />
+	<!-- 客户管理 -->
+	<bean name="/jplms/customer/customer" class="com.jplms.customer.action.CustomerAction" />
+	
+	<!-- 车队管理 -->
+	<bean name="/jplms/carteam/unit" class="com.jplms.carteam.action.JpcComUnitAction" />
+	<bean name="/jplms/carteam/busiuser" class="com.jplms.carteam.action.JpcBusiUserAction" />
+	<bean name="/jplms/carteam/delegation" class="com.jplms.carteam.action.JpcTraDelegationAction" />
+	<bean name="/jplms/carteam/collemoney" class="com.jplms.carteam.action.JpcGeneColleAction" />
+	<bean name="/jplms/carteam/applymoney" class="com.jplms.carteam.action.JpcFinacePayACtion" />
+	<bean name="/jplms/carteam/report" class="com.jplms.carteam.action.CarTeamRepAction" />
+	<bean name="/jplms/carteam/income" class="com.jplms.carteam.action.JpcFinaceIncomeAction" />
+
+	<!-- 驳船管理 -->
+	<bean name="/jplms/barge/shipcmp" class="com.jplms.barge.action.JpbShipCmpAction" />
+	<bean name="/jplms/barge/site" class="com.jplms.barge.action.JpbBargeSiteInfoAction" />
+	<bean name="/jplms/barge/cus" class="com.jplms.barge.action.JpbCusInfoAction" />
+	<bean name="/jplms/barge/sail" class="com.jplms.barge.action.JpbSailInfoAction" />
+	<bean name="/jplms/barge/warn" class="com.jplms.barge.action.JpbHeaConWarAction" />
+	<bean name="/jplms/barge/delega" class="com.jplms.barge.action.JpbDelegaAction" />
+	<bean name="/jplms/barge/boxtube" class="com.jplms.barge.action.JpbBoxTubeInfoAction" />
+	<bean name="/jplms/barge/boxtubemgr" class="com.jplms.barge.action.JpbBoxTubeMgrAction" />
+	<bean name="/jplms/barge/grossprofit" class="com.jplms.barge.action.JpbGrossProfitAction" />
+	<bean name="/jplms/barge/finance" class="com.jplms.barge.action.JpbFinancePayAction" />
+	<bean name="/jplms/barge/report" class="com.jplms.barge.action.ReportDelegaAction" />
+	<bean name="/jplms/barge/boat" class="com.jplms.barge.action.BargeBoatAction" />
+	
+	<!-- 报表管理 -->
+	<bean name="/jplms/report/carteam" class="com.jplms.report.action.ReportAction" />
+	<bean name="/jplms/report/barge" class="com.jplms.report.action.ReportAction" />
+	<bean name="/jplms/report/workorder" class="com.jplms.report.action.BillReportAction" />
+	<bean name="/jplms/report/extReport" class="com.jplms.report.action.ExtReportAction" />
+	<!-- 财务管理 -->
+	<bean name="/jplms/finace/applymoney" class="com.jplms.finance.action.BillFinacePayAction" />
+	<bean name="/jplms/finace/freightapply" class="com.jplms.finance.action.FreightApplyAction" />
+	<!-- 毛利调整 -->
+	<bean name="/jplms/finace/profit" class="com.jplms.finance.action.GrossProfitAction" />
+	<!-- 费用更改单 -->
+	<bean name="/jplms/finace/change" class="com.jplms.finance.action.JpChangeMoneyAction" />
+	<!-- 凭证生成 -->
+	<bean name="/jplms/finace/voucher" class="com.jplms.finance.action.VoucherAction" />
+	<!-- 金蝶新接口 -->
+	<bean name="/jplms/finace/extvoucher" class="com.jplms.finance.action.ExtVoucherAction" />
+	<!-- 行政管理 -->
+	<bean name="/jplms/hr/orgUser" class="com.jplms.hr.action.HrAction" />
+</beans>

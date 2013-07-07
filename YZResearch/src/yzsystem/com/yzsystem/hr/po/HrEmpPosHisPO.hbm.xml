@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.yzsystem.hr.po.HrEmpPosHisPO" table="HR_EMP_POS_HIS">
+        <id name="empPosHisId" column="EMPPOS_HISID" type="java.lang.String">
+            <generator class="uuid"/>
+        </id>
+		<property name="startDate" type="java.util.Date"   column="START_DATE" />
+		<property name="endDate" type="java.util.Date"   column="END_DATE" />
+		<property name="position" type="string"   column="POSITION" />
+		<property name="remark" type="string"   column="remark"/>
+    	<property name="hrEmployeeId" type="string"   column="HR_EMPLOYEEID" />
+    	<property name="hrOrgId" type="string"   column="HR_ORGID"/>
+    </class>
+ </hibernate-mapping>

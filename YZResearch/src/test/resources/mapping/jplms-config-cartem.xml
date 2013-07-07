@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vo-po-mapping>
+	<!-- 委托单位 -->
+	<class voClass="com.jplms.carteam.vo.JpcComUnitVO" poClass="com.jplms.carteam.po.JpcComUnitPO">
+		<property voProperty="id" poProperty="id"  voType="String" poType="String"  primary="true"/>
+		<property voProperty="carCode" poProperty="carCode"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="unit" poProperty="unit"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="contact" poProperty="contact"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="tel" poProperty="tel"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="mobile" poProperty="mobile"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="fax" poProperty="fax"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="remark" poProperty="remark"  voType="String" poType="String"  primary="false"/>
+	</class>	
+	<!-- 业务人员 -->
+	<class voClass="com.jplms.carteam.vo.JpcBusiUserVO" poClass="com.jplms.carteam.po.JpcBusiUserPO">
+		<property voProperty="id" poProperty="id"  voType="String" poType="String"  primary="true"/>
+		<property voProperty="carCode" poProperty="carCode"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="busiName" poProperty="busiName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="busiTel1" poProperty="busiTel1"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="busiTel2" poProperty="busiTel2"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="busiType" poProperty="busiType"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="delFlag" poProperty="delFlag"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="remark" poProperty="remark"  voType="String" poType="String"  primary="false"/>
+	</class>	
+	<!-- 司机信息 -->
+	<class voClass="com.jplms.carteam.vo.JpcDriverVO" poClass="com.jplms.carteam.po.JpcDriverPO">
+		<property voProperty="driverId" poProperty="driverId"  voType="String" poType="String"  primary="true"/>
+		<property voProperty="carCode" poProperty="carCode"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="driverName" poProperty="driverName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="mobile" poProperty="mobile"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="identification" poProperty="identification"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="note" poProperty="note"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="active" poProperty="active"  voType="int" poType="int"  primary="false"/>
+	</class>	
+	<!-- 委托单 -->
+	<class voClass="com.jplms.carteam.vo.JpcTraDelegationVO" poClass="com.jplms.carteam.po.JpcTraDelegationPO"> 
+		<property voProperty="jpcId" poProperty="jpcId"  voType="String" poType="String"  primary="true"/>
+		<property voProperty="carCode" poProperty="carCode"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="createDate" poProperty="createDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="carryDate" poProperty="carryDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="unitId" poProperty="unitId"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="unitName" poProperty="unitName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="clerkName" poProperty="clerkName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="merchName" poProperty="merchName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="merchMobile" poProperty="merchMobile"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="delegaType" poProperty="delegaType"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="delegaRemark" poProperty="delegaRemark"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="loadAdd" poProperty="loadAdd"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="carryRemark" poProperty="carryRemark"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="receiveCompany" poProperty="receiveCompany"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="recContact" poProperty="recContact"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="recConMobile" poProperty="recConMobile"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="shipCompany" poProperty="shipCompany"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="voyage" poProperty="voyage"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="destPortName" poProperty="destPortName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="loadPortName" poProperty="loadPortName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="wayBillNo" poProperty="wayBillNo"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="gp20" poProperty="gp20"  voType="String" poType="int"  primary="false"/>
+		<property voProperty="gp40" poProperty="gp40"  voType="String" poType="int"  primary="false"/>
+		<property voProperty="hq40" poProperty="hq40"  voType="String" poType="int"  primary="false"/>
+		<property voProperty="containerOne" poProperty="containerOne"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="containerTwo" poProperty="containerTwo"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="dpApplyNo" poProperty="dpApplyNo"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="dispatchRemark" poProperty="dispatchRemark"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="imcomeMoney" poProperty="imcomeMoney"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="organizerMoney" poProperty="organizerMoney"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="delyMoney" poProperty="delyMoney"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="storeMoney" poProperty="storeMoney"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="otherMoney" poProperty="otherMoney"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="totalReceiveMoney" poProperty="totalReceiveMoney"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="receiveRemark" poProperty="receiveRemark"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="payRemark" poProperty="payRemark"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="totalPayMoney" poProperty="totalPayMoney"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="profit" poProperty="profit"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="invBooking" poProperty="invBooking"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="isFinish" poProperty="isFinish"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="status" poProperty="status"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="isLock" poProperty="isLock"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="freightCharges" poProperty="freightCharges"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="freCharUnit" poProperty="freCharUnit"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="freCharFinish" poProperty="freCharFinish"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="singleCharge" poProperty="singleCharge"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="sinCharUnit" poProperty="sinCharUnit"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="sinCharFinish" poProperty="sinCharFinish"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="forDelayFee" poProperty="forDelayFee"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="delayFeeUnit" poProperty="delayFeeUnit"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="delayFeeFinish" poProperty="delayFeeFinish"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="stockpilingFee" poProperty="stockpilingFee"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="stoFeeUnit" poProperty="stoFeeUnit"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="stoFeeFinish" poProperty="stoFeeFinish"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="ortherFee" poProperty="ortherFee"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="othUnit" poProperty="othUnit"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="othFinish" poProperty="othFinish"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="renterCharges" poProperty="renterCharges"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="renCharUnit" poProperty="renCharUnit"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="renCharFinish" poProperty="renCharFinish"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="washCabinetFees" poProperty="washCabinetFees"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="wcFeeUnit" poProperty="wcFeeUnit"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="wcFeeFinish" poProperty="wcFeeFinish"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="upcounterCharge" poProperty="upcounterCharge"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="upcCharUnit" poProperty="upcCharUnit"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="upcCharFinish" poProperty="upcCharFinish"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="portCharge" poProperty="portCharge"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="portCharUnit" poProperty="portCharUnit"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="portCharFinish" poProperty="portCharFinish"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="handlingCharge" poProperty="handlingCharge"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="hanCharUnit" poProperty="hanCharUnit"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="hanCharFinish" poProperty="hanCharFinish"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="dockage" poProperty="dockage"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="dockageUnit" poProperty="dockageUnit"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="dockageFinish" poProperty="dockageFinish"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="collFeeId" poProperty="collFeeId"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="collFee" poProperty="collFee"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="collContact" poProperty="collContact"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="collContactFee" poProperty="collContactFee"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="collBill" poProperty="collBill"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="signDate" poProperty="signDate"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="collContactSure" poProperty="collContactSure"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="collUnitName" poProperty="collUnitName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="isSign" poProperty="isSign"  voType="Integer" poType="Integer"  primary="false"/>
+		<property voProperty="goods" poProperty="goods"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="loadRemark" poProperty="loadRemark"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="oceanConId1" poProperty="oceanConId1"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="oceanConId2" poProperty="oceanConId2"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="creator" poProperty="creator"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="submitor" poProperty="submitor"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="dgTempNo" poProperty="dgTempNo"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="conCarType" poProperty="conCarType"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="isExport" poProperty="isExport"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="isVerficate" poProperty="isVerficate"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="unitDemo" poProperty="unitDemo"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="dpPlanNo" poProperty="dpPlanNo"  voType="String" poType="String"  primary="false"/>
+	</class>
+	<!-- 应付费用 -->
+	<class voClass="com.jplms.carteam.vo.JpcPayFeeVO" poClass="com.jplms.carteam.po.JpcPayFeePO"> 
+		<property voProperty="payId" poProperty="payId"  voType="String" poType="String"  primary="true"/>
+		<property voProperty="applyFeeId" poProperty="applyFeeId"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="delegaId" poProperty="delegaId"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="carCode" poProperty="carCode"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="unitId" poProperty="unitId"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="unitName" poProperty="unitName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="feeType" poProperty="feeType"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="feeTypeName" poProperty="feeTypeName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="money" poProperty="money"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="carryDate" poProperty="carryDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="vovyage" poProperty="vovyage"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="wayBillNo" poProperty="wayBillNo"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="loadPortName" poProperty="loadPortName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="destPortName" poProperty="destPortName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="boxType" poProperty="boxType"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="boxNo" poProperty="boxNo"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="payUnit" poProperty="payUnit"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="isApply" poProperty="isApply"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="sailDate" poProperty="sailDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="unitDemo" poProperty="unitDemo"  voType="String" poType="String"  primary="false"/>
+	</class>
+	<!-- 车队代收款 -->
+	<class voClass="com.jplms.carteam.vo.JpcGeneColleVO" poClass="com.jplms.carteam.po.JpcGeneCollePO"> 
+		<property voProperty="collFeeId" poProperty="collFeeId"  voType="String" poType="String"  primary="true"/>
+		<property voProperty="carCode" poProperty="carCode"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="delegaCode" poProperty="delegaCode"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="collFee" poProperty="collFee"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="collContact" poProperty="collContact"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="collContactFee" poProperty="collContactFee"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="collBill" poProperty="collBill"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="signDate" poProperty="signDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="collContactSure" poProperty="collContactSure"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="collUnitName" poProperty="collUnitName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="isSign" poProperty="isSign"  voType="int" poType="int"  primary="false"/>
+		<property voProperty="remark" poProperty="remark"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="isApply" poProperty="isApply"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="applyNo" poProperty="applyNo"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="customerName" poProperty="customerName"  voType="String" poType="String"  primary="false"/>
+	</class>
+	<!-- 车队付款申请单 -->
+	<class voClass="com.jplms.carteam.vo.JpcFinacePayVO" poClass="com.jplms.carteam.po.JpcFinacePayPO"> 
+		<property voProperty="applyNo" poProperty="applyNo"  voType="String" poType="String"  primary="true"/>
+		<property voProperty="carCode" poProperty="carCode"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="applyUnit" poProperty="applyUnit"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="applyDate" poProperty="applyDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="applyMoney" poProperty="applyMoney"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="applyerId" poProperty="applyerId"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="applyerName" poProperty="applyerName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="audittorId" poProperty="audittorId"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="audittorName" poProperty="audittorName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="remark" poProperty="remark"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="status" poProperty="status"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="actApplyMoney" poProperty="actApplyMoney"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="collFee" poProperty="collFee"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="actCollFee" poProperty="actCollFee"  voType="String" poType="Bigdecimal"  primary="false"/>
+	</class>
+	<!-- 车队应收费用销核 -->
+	<class voClass="com.jplms.carteam.vo.JpcFinaceIncomeVO" poClass="com.jplms.carteam.po.JpcFinaceIncomePO"> 
+		<property voProperty="applyNo" poProperty="applyNo"  voType="String" poType="String"  primary="true"/>
+		<property voProperty="carCode" poProperty="carCode"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="applyDate" poProperty="applyDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="cusName" poProperty="cusName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="freightCharges" poProperty="freightCharges"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="incomeTotal" poProperty="incomeTotal"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="actCollFee" poProperty="actCollFee"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="applyerId" poProperty="applyerId"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="applyerName" poProperty="applyerName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="audittorId" poProperty="audittorId"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="audittorName" poProperty="audittorName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="status" poProperty="status"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="remark" poProperty="remark"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="verficateMoney" poProperty="verficateMoney"  voType="String" poType="Bigdecimal"  primary="false"/>
+	</class>
+		
+</vo-po-mapping>

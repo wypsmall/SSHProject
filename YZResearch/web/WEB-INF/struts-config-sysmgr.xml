@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+        "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+	</form-beans>
+	<action-mappings>
+		<action
+	             scope="request"
+	             parameter="method"
+	             path="/loginlog"
+	             type="org.springframework.web.struts.DelegatingActionProxy"
+	             validate="false">
+	     </action>
+	     <action
+	             scope="request"
+	             parameter="method"
+	             path="/resources"
+	             type="org.springframework.web.struts.DelegatingActionProxy"
+	             validate="false">
+	     </action>
+	     <action
+	             scope="request"
+	             parameter="method"
+	             path="/sysmgr"
+	             type="org.springframework.web.struts.DelegatingActionProxy"
+	             validate="false">
+	     </action>
+	     <action
+	             scope="request"
+	             parameter="method"
+	             path="/warn"
+	             type="org.springframework.web.struts.DelegatingActionProxy"
+	             validate="false">
+	     </action>
+	</action-mappings>
+	
+	<controller>
+		<set-property property="processorClass" value="org.apache.struts.tiles.TilesRequestProcessor" />
+	</controller>
+	<plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
+  		<set-property property="contextConfigLocation" value="/WEB-INF/classes/spring/module-sysmgr-action.xml" />
+ 	</plug-in>
+ 	<plug-in className="org.apache.struts.tiles.TilesPlugin" >
+		<set-property property="definitions-config" value="/WEB-INF/tiles-def.xml" />
+		<set-property property="moduleAware" value="true" />
+		<set-property property="definitions-debug" value="2"/>
+		<set-property property="definitions-parser-details" value="2"/>
+		<set-property property="definitions-parser-validate" value="true" />
+	</plug-in>
+</struts-config>

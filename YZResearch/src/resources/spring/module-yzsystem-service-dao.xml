@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+  xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd" default-autowire="byName">
+	<!-- 系统参数 -->
+	<bean id="sysParamDao" class="com.yzsystem.sysparam.dao.impl.SysParamDaoImpl" />
+	<bean id="sysParamService" class="com.yzsystem.sysparam.service.impl.SysParamServiceImpl" />
+	
+	<!-- 行政人事 -->
+	<bean id="hrDao" class="com.yzsystem.hr.dao.impl.HrDaoImpl" />
+	<bean id="hrService" class="com.yzsystem.hr.service.impl.HrServiceImpl" />
+	
+	<!-- 主办单位 -->
+	<bean id="hostunitDao" class="com.yzsystem.exhibitions.dao.impl.HostunitDaoImpl" />
+	<bean id="hostunitService" class="com.yzsystem.exhibitions.service.impl.HostunitServiceImpl" />
+	<!-- 展会项目 -->
+	<bean id="exhProDao" class="com.yzsystem.exhibitions.dao.impl.ExhProDaoImpl" />
+	<bean id="exhProService" class="com.yzsystem.exhibitions.service.impl.ExhProServiceImpl" />
+	<!-- 参展企业 -->
+	<bean id="exhProjEnterpriseDao" class="com.yzsystem.exhibitions.dao.impl.ExhProjEnterpriseDaoImpl" />
+	<bean id="exhProjEnterpriseService" class="com.yzsystem.exhibitions.service.impl.ExhProjEnterpriseServiceImpl" />
+	<!-- 企业资料 -->
+	<bean id="enterpriseDao" class="com.yzsystem.crm.dao.impl.EnterpriseDaoImpl" />
+	<bean id="enterpriseService" class="com.yzsystem.crm.service.impl.EnterpriseServiceImpl" />
+	<!-- 学习测试 -->
+	<bean id="tpersonDao" class="com.yzsystem.tperson.dao.impl.TPersonDaoImpl" />
+	<bean id="tpersonService" class="com.yzsystem.tperson.service.impl.TPersonServiceImpl" />	
+	
+	<bean id="passengerDao" class="com.yzsystem.tresearch.dao.impl.PassengerDaoImpl" />
+	<bean id="passengerService" class="com.yzsystem.tresearch.service.impl.PassengerServiceImpl" />	
+	
+	<bean id="abroadPersonDao" class="com.yzsystem.tresearch.dao.impl.AbroadPersonDaoImpl" />
+	<bean id="abroadPersonService" class="com.yzsystem.tresearch.service.impl.AbroadPersonServiceImpl" />
+	
+	<bean id="baseTransfer" class="com.neo.common.transfer.BaseTransfer" />
+	<bean id="userDao" class="com.yzsystem.tresearch.dao.impl.UserDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>	
+	<bean id="flowAppDao" class="com.yzsystem.tresearch.dao.impl.FlowAppDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>	
+	<bean id="flowTransfer" class="com.yzsystem.tresearch.common.FlowTransfer" />
+	<bean id="userService" class="com.yzsystem.tresearch.service.impl.UserServiceImpl">
+		<property name="airBaseDao" ref="userDao" />
+		<property name="userDao" ref="userDao" />
+		<property name="baseTransfer" ref="baseTransfer" />
+	</bean>	
+	<bean id="flowAppService" class="com.yzsystem.tresearch.service.impl.FlowAppServiceImpl">
+		<property name="airBaseDao" ref="flowAppDao" />
+		<property name="flowAppDao" ref="flowAppDao" />
+		<property name="baseTransfer" ref="flowTransfer" />
+	</bean>	
+</beans>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.imti.sysmgr.po.SysRolePO" table="IMTI_SYS_ROLE">
+        <id name="id" column="FID" type="java.lang.String">
+            <generator class="uuid"/>
+        </id>
+        <property name="roleName"  type="string" update="true" insert="true"  column="FROLE_NAME" length="50"/>
+		<property name="roleCode" type="string" update="true" insert="true"  column="FROLE_CODE" length="50"/>
+		<property name="roleMemo" type="string" update="true" insert="true"  column="FROLE_MEMO" length="300"/>
+    	<set name="userSet" table="IMTI_SYS_USER_ROLE" inverse="true">  
+            <key column="FROLE_ID"></key>  
+            <many-to-many column="FUSER_ID" class="com.imti.sysmgr.po.UserPO"></many-to-many>  
+        </set>
+   		<property name="ztId" type="string" update="true" insert="true"  column="ZT_ID" length="100"/>
+    </class>
+</hibernate-mapping>

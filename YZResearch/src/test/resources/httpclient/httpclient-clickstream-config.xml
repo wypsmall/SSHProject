@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="GBK"?>
+<httpclient>
+	<!-- 说明：
+	cmp2_login_click(必填项)：当前点击流中的唯一标示
+	cmp2_login_header（可选项）：请求的请求头
+	method（可填：默认值是get）：请求方法post、get、upload文件上传的post方法
+	url（必填）：请求的url
+	nextClick（可填）：下一个点击的ID标识
+	clickStreamId（必填）：点击隶属点击流的ID标识
+	startBtn（可填）:是否是本点击流的启动点击
+	service（可瑱）：点击操作的具体实现，有一个默认的实现com.imti.framework.compenent.httpclient.clickstream.service.impl.DefaultClickInvokeServiceImpl
+	 -->
+	<clickstream id="addReq_pengpeng" >
+	 	<click currentClick="cmp2_login_click" 
+	 		   headerId="cmp2_login_header"  
+	 		   method="post" 
+	 		   url="http://gmccbi.gmcc.net/gmcc/Hand_Login.jsp" 
+	 		   nextClick=""
+	 		   clickStreamId="addReq_pengpeng"
+	 		   startBtn="true"
+	 		   service=""/>
+	</clickstream> 
+	
+</httpclient>

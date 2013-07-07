@@ -1,0 +1,15 @@
+.tab-house { 
+	background: url(/images/icons/house.png) left top no-repeat !important; 
+}
+.tab-user { 
+	background: url(/images/icons/user.gif) left top no-repeat !important; 
+}
+.tab-resource { 
+	background: url(/images/icons/icon2_063.png) left top no-repeat !important; 
+}
+.tab-role { 
+	background: url(/images/icons/subs.gif) left top no-repeat !important; 
+}
+.window-edit { 
+	background: url(/images/icons/ico03.png) left top no-repeat !important; 
+} 

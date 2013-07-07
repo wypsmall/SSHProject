@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vo-po-mapping>
+	<!-- 下面是驳船部分 -->
+	<!-- 船公司 -->
+	<class voClass="com.jplms.barge.vo.JpbShipCmpVO" poClass="com.jplms.barge.po.JpbShipCmpPO"> 
+		<property voProperty="shipId" poProperty="shipId"  voType="String" poType="String"  primary="true"/>
+		<property voProperty="shipName" poProperty="shipName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="shipAlias" poProperty="shipAlias"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="remark" poProperty="remark"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="order" poProperty="order"  voType="int" poType="int"  primary="false"/>
+	</class>
+	<!-- 驳船点 -->
+	<class voClass="com.jplms.barge.vo.JpbBargeSiteInfoVO" poClass="com.jplms.barge.po.JpbBargeSiteInfoPO"> 
+		<property voProperty="siteId" poProperty="siteId"  voType="String" poType="String"  primary="true"/>
+		<property voProperty="siteName" poProperty="siteName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="siteAddress" poProperty="siteAddress"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="siteContact" poProperty="siteContact"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="siteConTel" poProperty="siteConTel"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="order" poProperty="order"  voType="int" poType="int"  primary="false"/>
+		<property voProperty="remark" poProperty="remark"  voType="String" poType="String"  primary="false"/>
+	</class>
+	<!-- 驳船点用户关系 -->
+	<class voClass="com.jplms.barge.vo.JpbBargeUserVO" poClass="com.jplms.barge.po.JpbBargeUserPO"> 
+		<property voProperty="id" poProperty="id"  voType="String" poType="String"  primary="true"/>
+		<property voProperty="bargeSiteId" poProperty="bargeSiteId"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="userId" poProperty="userId"  voType="String" poType="String"  primary="false"/>
+	</class>
+	<!-- 驳船客户 -->
+	<class voClass="com.jplms.barge.vo.JpbCusInfoVO" poClass="com.jplms.barge.po.JpbCusInfoPO"> 
+		<property voProperty="cusId" poProperty="cusId"  voType="String" poType="String"  primary="true"/>
+		<property voProperty="cusAlias" poProperty="cusAlias"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="cusName" poProperty="cusName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="remark" poProperty="remark"  voType="String" poType="String"  primary="false"/>
+	</class>
+	<!-- 到港超期预警 -->
+	<class voClass="com.jplms.barge.vo.JpbHeaConWarVO" poClass="com.jplms.barge.po.JpbHeaConWarPO"> 
+		<property voProperty="bwId" poProperty="bwId"  voType="String" poType="String"  primary="true"/>
+		<property voProperty="boxType" poProperty="boxType"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="boxName" poProperty="boxName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="dayNum" poProperty="dayNum"  voType="int" poType="int"  primary="false"/>
+		<property voProperty="content" poProperty="content"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="remark" poProperty="remark"  voType="String" poType="String"  primary="false"/>
+	</class>
+	<!-- 船期管理 -->
+	<class voClass="com.jplms.barge.vo.JpbSailInfoVO" poClass="com.jplms.barge.po.JpbSailInfoPO"> 
+		<property voProperty="sailId" poProperty="sailId"  voType="String" poType="String"  primary="true"/>
+		<property voProperty="sailName" poProperty="sailName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="sailVoyage" poProperty="sailVoyage"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="caption" poProperty="caption"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="captionTel" poProperty="captionTel"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="createDate" poProperty="createDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="sailType" poProperty="sailType"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="remark" poProperty="remark"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="captionTel2" poProperty="captionTel2"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="teu" poProperty="teu"  voType="String" poType="String"  primary="false"/>
+	</class>
+	<!-- 船期细表 -->
+	<class voClass="com.jplms.barge.vo.JpbSailDateVO" poClass="com.jplms.barge.po.JpbSailDatePO"> 
+		<property voProperty="id" poProperty="id"  voType="String" poType="String"  primary="true"/>
+		<property voProperty="sailId" poProperty="sailId"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="siteId" poProperty="siteId"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="siteAlias" poProperty="siteAlias"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="reachTime" poProperty="reachTime"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="leaveTime" poProperty="leaveTime"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="remark" poProperty="remark"  voType="String" poType="String"  primary="false"/>
+	</class>
+	<!-- 驳船业务单 -->
+	<class voClass="com.jplms.barge.vo.JpbDelegaVO" poClass="com.jplms.barge.po.JpbDelegaPO"> 
+		<property voProperty="delegaNo" poProperty="delegaNo"  voType="String" poType="String"  primary="true"/>
+		<property voProperty="isPlan" poProperty="isPlan"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="cusId" poProperty="cusId"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="cusName" poProperty="cusName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="loadDate" poProperty="loadDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="bargeName" poProperty="bargeName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="bargeVoyage" poProperty="bargeVoyage"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="boxNo" poProperty="boxNo"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="boxTitle" poProperty="boxTitle"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="boxCmp" poProperty="boxCmp"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="boxCmpId" poProperty="boxCmpId"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="boxType" poProperty="boxType"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="boxNum" poProperty="boxNum"  voType="String" poType="Long"  primary="false"/>
+		<property voProperty="bargeLoadPort" poProperty="bargeLoadPort"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="bargeDestPort" poProperty="bargeDestPort"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="destAddress" poProperty="destAddress"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="incomeFee" poProperty="incomeFee"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="incomeDate" poProperty="incomeDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="othFee" poProperty="othFee"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="othDate" poProperty="othDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="collFee" poProperty="collFee"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="collContact" poProperty="collContact"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="collDate" poProperty="collDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="collBill" poProperty="collBill"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="dgFlag" poProperty="dgFlag"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="transType" poProperty="transType"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="delegaType" poProperty="delegaType"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="remark" poProperty="remark"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="wyaBillNo" poProperty="wyaBillNo"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="goods" poProperty="goods"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="weight" poProperty="weight"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="shipNameVoyage" poProperty="shipNameVoyage"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="singleCharge" poProperty="singleCharge"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="freightCharges" poProperty="freightCharges"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="upcounterCharge" poProperty="upcounterCharge"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="fordelayFee" poProperty="fordelayFee"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="stockpilingFee" poProperty="stockpilingFee"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="washcabinetFee" poProperty="washcabinetFee"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="portCharge" poProperty="portCharge"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="dockage" poProperty="dockage"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="busiFee" poProperty="busiFee"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="pothFee" poProperty="pothFee"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="hasExport" poProperty="hasExport"  voType="String" poType="String"  primary="false"/>
+	</class>
+	<!-- 驳船业务单 导入时的临时表 在每次导入数据处理后，进行删除-->
+	<class voClass="com.jplms.barge.vo.JpbDelegaTempVO" poClass="com.jplms.barge.po.JpbDelegaTempPO"> 
+		<property voProperty="delegaNo" poProperty="delegaNo"  voType="String" poType="String"  primary="true"/>
+		<property voProperty="isPlan" poProperty="isPlan"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="cusId" poProperty="cusId"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="cusName" poProperty="cusName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="loadDate" poProperty="loadDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="bargeName" poProperty="bargeName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="bargeVoyage" poProperty="bargeVoyage"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="boxNo" poProperty="boxNo"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="boxTitle" poProperty="boxTitle"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="boxCmp" poProperty="boxCmp"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="boxCmpId" poProperty="boxCmpId"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="boxType" poProperty="boxType"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="boxNum" poProperty="boxNum"  voType="String" poType="Long"  primary="false"/>
+		<property voProperty="bargeLoadPort" poProperty="bargeLoadPort"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="bargeDestPort" poProperty="bargeDestPort"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="destAddress" poProperty="destAddress"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="incomeFee" poProperty="incomeFee"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="incomeDate" poProperty="incomeDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="othFee" poProperty="othFee"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="othDate" poProperty="othDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="collFee" poProperty="collFee"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="collContact" poProperty="collContact"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="collDate" poProperty="collDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="collBill" poProperty="collBill"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="dgFlag" poProperty="dgFlag"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="transType" poProperty="transType"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="delegaType" poProperty="delegaType"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="remark" poProperty="remark"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="wyaBillNo" poProperty="wyaBillNo"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="shipNameVoyage" poProperty="shipNameVoyage"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="goods" poProperty="goods"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="weight" poProperty="weight"  voType="String" poType="String"  primary="false"/>
+	</class>
+	
+	<!-- 驳船支出费用 -->
+	<class voClass="com.jplms.barge.vo.JpbPayFeeVO" poClass="com.jplms.barge.po.JpbPayFeePO"> 
+		<property voProperty="id" poProperty="id"  voType="String" poType="String"  primary="true"/>
+		<property voProperty="delegaNo" poProperty="delegaNo"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="applyNo" poProperty="applyNo"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="shipName" poProperty="shipName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="voyage" poProperty="voyage"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="bargeSiteId" poProperty="bargeSiteId"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="bargeSiteName" poProperty="bargeSiteName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="boxType" poProperty="boxType"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="boxNo" poProperty="boxNo"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="boxTitle" poProperty="boxTitle"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="boxCmp" poProperty="boxCmp"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="loadDate" poProperty="loadDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="feeType" poProperty="feeType"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="feeName" poProperty="feeName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="payFee" poProperty="payFee"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="payUnit" poProperty="payUnit"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="isFinish" poProperty="isFinish"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="wyaBillNo" poProperty="wyaBillNo"  voType="String" poType="String"  primary="false"/>
+	</class>
+	<!-- 驳船支出费用 临时表：在每次导入数据处理后，进行删除-->
+	<class voClass="com.jplms.barge.vo.JpbPayFeeTempVO" poClass="com.jplms.barge.po.JpbPayFeeTempPO"> 
+		<property voProperty="id" poProperty="id"  voType="String" poType="String"  primary="true"/>
+		<property voProperty="shipName" poProperty="shipName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="voyage" poProperty="voyage"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="bargeSiteId" poProperty="bargeSiteId"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="bargeSiteName" poProperty="bargeSiteName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="boxNo" poProperty="boxNo"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="feeType" poProperty="feeType"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="feeName" poProperty="feeName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="payFee" poProperty="payFee"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="wyaBillNo" poProperty="wyaBillNo"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="payUnit" poProperty="payUnit"  voType="String" poType="String"  primary="false"/>
+	</class>
+	<!-- 箱管基础信息 -->
+	<class voClass="com.jplms.barge.vo.JpbBoxTubeInfoVO" poClass="com.jplms.barge.po.JpbBoxTubeInfoPO"> 
+		<property voProperty="boxId" poProperty="boxId"  voType="String" poType="String"  primary="true"/>
+		<property voProperty="delegaNo" poProperty="delegaNo"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="boxNo" poProperty="boxNo"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="boxType" poProperty="boxType"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="boxTitle" poProperty="boxTitle"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="boxCmp" poProperty="boxCmp"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="boxCmpId" poProperty="boxCmpId"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="bargeLoadPort" poProperty="bargeLoadPort"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="bargeDestPort" poProperty="bargeDestPort"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="boxStatus" poProperty="boxStatus"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="enterDate" poProperty="enterDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="shipVoyage" poProperty="shipVoyage"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="wayBillNo" poProperty="wayBillNo"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="goods" poProperty="goods"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="weight" poProperty="weight"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="cusId" poProperty="cusId"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="cusName" poProperty="cusName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="verStatus" poProperty="verStatus"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="verDate" poProperty="verDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="isBad" poProperty="isBad"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="remark" poProperty="remark"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="voyageIn" poProperty="voyageIn"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="voyageInDate" poProperty="voyageInDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="voyageOut" poProperty="voyageOut"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="voyageOutDate" poProperty="voyageOutDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="isDispatch" poProperty="isDispatch"  voType="String" poType="String"  primary="false"/>
+	</class>
+	<!-- 办事点箱管 -->
+	<class voClass="com.jplms.barge.vo.JpbBoxTubeMgrVO" poClass="com.jplms.barge.po.JpbBoxTubeMgrPO"> 
+		<property voProperty="id" poProperty="id"  voType="String" poType="String"  primary="true"/>
+		<property voProperty="boxId" poProperty="boxId"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="bargeSiteId" poProperty="bargeSiteId"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="bargeSiteName" poProperty="bargeSiteName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="boxNO" poProperty="boxNO"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="boxType" poProperty="boxType"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="boxTitle" poProperty="boxTitle"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="boxCmpId" poProperty="boxCmpId"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="bargeLoadPort" poProperty="bargeLoadPort"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="bargeDestPort" poProperty="bargeDestPort"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="boxCmp" poProperty="boxCmp"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="voyageIn" poProperty="voyageIn"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="voyageInDate" poProperty="voyageInDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="voyageOut" poProperty="voyageOut"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="voyageOutDate" poProperty="voyageOutDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="destAddrss" poProperty="destAddrss"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="carryUnit" poProperty="carryUnit"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="shipVoyage" poProperty="shipVoyage"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="waybillNO" poProperty="waybillNO"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="carryAddress" poProperty="carryAddress"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="carryDate" poProperty="carryDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="isBad" poProperty="isBad"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="carryPeron" poProperty="carryPeron"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="loadAddress" poProperty="loadAddress"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="loadDate" poProperty="loadDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="loadPerson" poProperty="loadPerson"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="status" poProperty="status"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="dgFlag" poProperty="dgFlag"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="isHandle" poProperty="isHandle"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="srcSiteId" poProperty="srcSiteId"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="remark" poProperty="remark"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="memo" poProperty="memo"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="collFee" poProperty="collFee"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="goods" poProperty="goods"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="transType" poProperty="transType"  voType="String" poType="String"  primary="false"/>
+	</class>
+	<!-- 驳船 毛利调整 -->
+	<class voClass="com.jplms.barge.vo.JpbGrossProfitVO" poClass="com.jplms.barge.po.JpbGrossProfitPO"> 
+		<property voProperty="id" poProperty="id"  voType="String" poType="String"  primary="true"/>
+		<property voProperty="yearMonth" poProperty="yearMonth"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="money" poProperty="money"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="unit" poProperty="unit"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="unitName" poProperty="unitName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="remark" poProperty="remark"  voType="String" poType="String"  primary="false"/>
+	</class>
+	<!-- 付款申请 -->
+	<class voClass="com.jplms.barge.vo.JpbFinancePayVO" poClass="com.jplms.barge.po.JpbFinancePayPO"> 
+		<property voProperty="applyNO" poProperty="applyNO"  voType="String" poType="String"  primary="true"/>
+		<property voProperty="payUnit" poProperty="payUnit"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="applyDate" poProperty="applyDate"  voType="String" poType="Date"  primary="false"/>
+		<property voProperty="applyerId" poProperty="applyerId"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="applyerName" poProperty="applyerName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="applyMoney" poProperty="applyMoney"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="collMoney" poProperty="collMoney"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="payMoney" poProperty="payMoney"  voType="String" poType="Bigdecimal"  primary="false"/>
+		<property voProperty="auditorId" poProperty="auditorId"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="auditorName" poProperty="auditorName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="status" poProperty="status"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="remark" poProperty="remark"  voType="String" poType="String"  primary="false"/>
+	</class>
+	<class voClass="com.jplms.barge.vo.JpbBargeBoatVO" poClass="com.jplms.barge.po.JpbBargeBoatPO"> 
+		<property voProperty="boatId" poProperty="boatId"  voType="String" poType="String"  primary="true"/>
+		<property voProperty="boatName" poProperty="boatName"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="captain" poProperty="captain"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="mobile1" poProperty="mobile1"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="mobile2" poProperty="mobile2"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="lgpla" poProperty="lgpla"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="remark" poProperty="remark"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="finCode" poProperty="finCode"  voType="String" poType="String"  primary="false"/>
+		<property voProperty="order" poProperty="order"  voType="int" poType="int"  primary="false"/>
+	</class>
+</vo-po-mapping>

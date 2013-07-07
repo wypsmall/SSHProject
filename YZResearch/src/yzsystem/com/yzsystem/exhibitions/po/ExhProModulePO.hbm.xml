@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.yzsystem.exhibitions.po.ExhProModulePO" table="YZ_EXHPRO_MODULE">
+        <id name="exhProModuleId" column="EXHPRO_MODULEID" type="java.lang.Integer">
+            <generator class="native"/>
+        </id>
+		<property name="exhProId" type="java.lang.Integer"  column="EXH_PROID" />
+		<property name="charges" type="java.math.BigDecimal"  column="CHARGES" />
+		<property name="measurementUnits" type="int"  column="MEASUREMENT_UNITS" />
+		<property name="lockStatus" type="short"  column="LOCK_STATUS"/>
+    	<property name="operator" type="string"  column="OPERATOR" />
+    	<property name="operateDate" type="java.util.Date"  column="OPERATE_DATE"/>
+    	<many-to-one name="moduleItem" column="PARAM_ID" class="com.yzsystem.sysparam.po.SysParamPO" fetch="join" lazy="false"/>  
+    </class>
+    <resultset name="rsExhProModule">
+    	<return-scalar column="exhProModuleId" type="java.lang.Integer"/>
+    	<return-scalar column="exhProId" type="java.lang.Integer"/>
+    	<return-scalar column="charges" type="java.lang.String"/>
+    	<return-scalar column="measurementUnits" type="int"/>
+    	<return-scalar column="lockStatus" type="java.lang.Short"/>
+    	<return-scalar column="operator" type="java.lang.String"/>
+    	<return-scalar column="operateDate" type="java.lang.String"/>
+    	<return-scalar column="paramId" type="java.lang.Integer"/>
+    	<return-scalar column="paramValue" type="java.lang.String"/>
+    	<return-scalar column="paramRemark" type="java.lang.String"/>
+    	<return-scalar column="paramName" type="java.lang.String"/>
+    </resultset>
+    <sql-query name="sqlExhProModule" >
+		<![CDATA[
+		 SELECT P.PARAM_ID AS paramId ,P.PARAM_NAME AS paramName ,P.PARAM_VALUE AS paramValue,P.PARAM_REMARK AS paramRemark,
+			   M.EXHPRO_MODULEID AS exhProModuleId,M.EXH_PROID AS exhProId,M.CHARGES AS charges,
+			   ISNULL(M.MEASUREMENT_UNITS,0) AS measurementUnits,ISNULL(M.LOCK_STATUS,1) AS lockStatus,M.OPERATOR AS operator,M.OPERATE_DATE AS operateDate
+		FROM YZ_SYS_PARAM P
+		LEFT JOIN YZ_EXHPRO_MODULE M ON P.PARAM_ID=M.PARAM_ID AND M.EXH_PROID=?
+		WHERE P.PARAM_MODULE_CODE=?
+		ORDER BY P.PARAM_MODULE_CODE,P.PARAM_CODE,P.DISPLAY_INDEX
+	   ]]>
+	</sql-query>
+</hibernate-mapping>

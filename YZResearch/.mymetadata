@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="imti"
+  id="myeclipse.1269703785562"
+  context-root="/imticg"
+  j2ee-spec="5.0"
+  archive="imti.war">
+  <attributes>
+    <attribute name="webrootdir" value="web" />
+  </attributes>
+</project-module>
+

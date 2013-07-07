@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.yzsystem.tresearch.po.UserDO" table="imti_sys_user">
+        <id name="fid" column="FID" type="string">
+        </id>
+        <property name="fuserName" column="FUSER_NAME" type="string" />
+    </class>
+    
+    <class name="com.yzsystem.tresearch.po.FlowAppDO" table="T_FLOW_APP">
+        <id name="flwId" column="FLW_ID" type="java.lang.Integer">
+            <generator class="native"/>
+        </id>
+		<property name="flwCode" column="FLW_CODE" type="string" />
+		<property name="flwTitle" column="FLW_TITILE" type="string" />
+		<property name="flwRemark" column="FLW_REMARK" type="string" />
+		<many-to-one name="flwProposer" column="FLW_PROPOSER_ID" class="com.yzsystem.tresearch.po.UserDO" fetch="join" lazy="false"/>  
+   		<many-to-one name="flwAuditor" column="FLW_AUDITOR_ID" class="com.yzsystem.tresearch.po.UserDO" fetch="join" lazy="false"/>
+		<property name="flwReply" column="FLW_REPLY" type="string" />
+		<property name="flwStatus" column="FLW_STATUS" type="java.lang.Integer" />
+		<property name="inTime" column="IN_TIME" type="string" />
+		<property name="modTime" column="MOD_TIME" type="string" />
+    </class>
+    <sql-query name="sqlGetUserPageVO">
+		<![CDATA[select tu.fid as "fid",
+ tu.fuser_name as "fuserName" 
+ from imti_sys_user tu 
+ where ]]>
+	</sql-query>
+</hibernate-mapping>

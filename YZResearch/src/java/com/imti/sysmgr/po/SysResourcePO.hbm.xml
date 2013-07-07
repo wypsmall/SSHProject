@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.imti.sysmgr.po.SysResourcePO" table="IMTI_SYS_RESOURCE">
+        <id name="id" column="FID" type="java.lang.String">
+            <generator class="uuid"/>
+        </id>
+        <property name="parentId"  type="string" update="true" insert="true"  column="FPARENT_ID" length="32"/>
+		<property name="name" type="string" update="true" insert="true"  column="FNAME" length="50"/>
+		<property name="code" type="string" update="true" insert="true"  column="FCODE" length="50"/>
+		<property name="level" type="int" update="true" insert="true"  column="FLEVEL"/>
+		<property name="displayIndex" type="int" update="true" insert="true"  column="FDISPLAY_INDEX"/>
+		<property name="imgUrl" type="string" update="true" insert="true"  column="FIMG_URL" length="100"/>
+    	<property name="url" type="string" update="true" insert="true"  column="FRSURL" length="100"/>
+    	<property name="validFlag" type="string" update="true" insert="true"  column="FVALID_FLAG" length="1"/>
+    	<property name="memo" type="string" update="true" insert="true"  column="FMEMO" length="300"/>
+    	<property name="rsPath" type="string" update="true" insert="true"  column="FRS_PATH" length="600"/>
+    	<property name="ztId" type="string" update="true" insert="true"  column="ZT_ID" length="100"/>
+    </class>
+    <resultset name="rsSysRsBean">
+		<return-scalar column="rootId" type="java.lang.String"/>
+		<return-scalar column="rootCode" type="java.lang.String"/>
+		<return-scalar column="rootName" type="java.lang.String"/>
+		<return-scalar column="rootImgUrl" type="java.lang.String"/>
+		<return-scalar column="rootRsUrl" type="java.lang.String"/>
+		<return-scalar column="secondId" type="java.lang.String"/>
+		<return-scalar column="secondCode" type="java.lang.String"/>
+		<return-scalar column="secondName" type="java.lang.String"/>
+		<return-scalar column="secondImgUrl" type="java.lang.String"/>
+		<return-scalar column="secondRsUrl" type="java.lang.String"/>
+		<return-scalar column="thirdId" type="java.lang.String"/>
+		<return-scalar column="thirdCode" type="java.lang.String"/>
+		<return-scalar column="thirdName" type="java.lang.String"/>
+		<return-scalar column="operatorId" type="java.lang.String"/>
+		<return-scalar column="operatorCode" type="java.lang.String"/>
+		<return-scalar column="operatorName" type="java.lang.String"/>
+	</resultset>
+    <sql-query name="sqlSysRsBean" >
+		<![CDATA[
+			SELECT RSF.FID AS rootId,RSF.FCODE AS rootCode,RSF.FNAME AS rootName,RSF.FIMG_URL AS rootImgUrl,RSF.FRSURL AS rootRsUrl,
+				   RSS.FID AS secondId,RSS.FCODE AS secondCode,RSS.FNAME AS secondName,RSS.FIMG_URL AS secondImgUrl,RSS.FRSURL AS secondRsUrl,
+				   RST.FID AS thirdId,RST.FCODE AS thirdCode,RST.FNAME AS thirdName,
+				   OPE.FID AS operatorId,(RST.FCODE+'_'+OPE.FCODE) AS operatorCode,OPE.FNAME AS operatorName
+			FROM imti_sys_resource RSF
+			LEFT JOIN imti_sys_resource RSS ON RSS.FPARENT_ID=RSF.FID
+			LEFT JOIN imti_sys_resource RST ON RST.FPARENT_ID=RSS.FID
+			LEFT JOIN imti_sys_operator OPE ON OPE.FRS_ID=RST.FID
+			WHERE RSF.FPARENT_ID=?
+			ORDER BY RSF.FDISPLAY_INDEX,RSS.FDISPLAY_INDEX,RST.FDISPLAY_INDEX,OPE.FDISPLAY_INDEX
+	   ]]>
+	</sql-query>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.imti.sysmgr.po.OrgPO" table="IMTI_SYS_ORG">
+        <id name="orgId" column="FORG_ID" type="java.lang.String">
+            <generator class="uuid"/>
+        </id>
+        <property name="orgName"  type="string" update="true" insert="true"  column="FORG_NAME" length="50"/>
+		<property name="orgCode" type="string" update="true" insert="true"  column="FORG_CODE" length="50"/>
+		<property name="orgParentId" type="string" update="true" insert="true"  column="FORG_PARENT_ID" length="300"/>
+		<property name="memo" type="string" update="true" insert="true"  column="FMEMO" length="300"/>
+    	<property name="orgParentCode">
+   		<formula><![CDATA[(select org.FORG_CODE from IMTI_SYS_ORG org where org.FORG_ID=FORG_PARENT_ID)]]></formula>
+	   	</property>
+	   	<property name="orgParentName">
+	   		<formula><![CDATA[(select org.FORG_NAME from IMTI_SYS_ORG org where org.FORG_ID=FORG_PARENT_ID)]]></formula>
+	   	</property>
+	   	<property name="type" type="string" update="true" insert="true"  column="TYPE" length="2"/>
+    	<property name="ztId" type="string" update="true" insert="true"  column="ZT_ID" length="100"/>
+    	<property name="ownerCompany" type="string" update="false" insert="true"  column="OWNER_COMPANY" length="100"/>
+    	<property name="displayIndex" type="int" update="false" insert="true"  column="DISPLAY_INDEX" />
+    </class>
+</hibernate-mapping>

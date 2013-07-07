@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+  xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd" default-autowire="byName">
+	
+	<bean id="synchronizeTask" class="com.jplms.task.SynchronizeTask"></bean>
+	<bean name="synchronizeTimerTask" class="org.springframework.scheduling.timer.ScheduledTimerTask">
+		<property name="timerTask">
+			<ref bean="synchronizeTask"></ref>
+		</property>
+		<property name="period">
+			<value>28800000</value>
+		</property>
+		<property name="delay">
+			<value>1000</value>
+		</property>
+	</bean>
+	<bean class="org.springframework.scheduling.timer.TimerFactoryBean">
+		<property name="scheduledTimerTasks">
+			<list>
+				<ref bean="synchronizeTimerTask" />
+			</list>
+		</property>
+	</bean>
+</beans>

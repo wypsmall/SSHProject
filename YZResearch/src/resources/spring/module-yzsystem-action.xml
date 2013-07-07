@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+  xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd" default-autowire="byName">
+	
+	<!-- 行政人事 -->
+	<bean name="/yzsystem/hr/hrmgr" class="com.yzsystem.hr.action.HrAction" />
+	<!-- 参数配置 -->
+	<bean name="/yzsystem/sysparam/sysparam" class="com.yzsystem.sysparam.action.SysParamAction" />
+	<!-- 主办单位 -->
+	<bean name="/yzsystem/exhibitions/hostunit" class="com.yzsystem.exhibitions.action.HostunitAction" />
+	<!-- 展会项目 -->
+	<bean name="/yzsystem/exhibitions/exhibition" class="com.yzsystem.exhibitions.action.ExhibitionProjectAction" />
+	<!-- 参展企业 -->
+	<bean name="/yzsystem/exhibitions/enterprise" class="com.yzsystem.exhibitions.action.ExhProjEnterpriseAction" />
+	<!-- 企业资料 -->
+	<bean name="/yzsystem/crm/enterprise" class="com.yzsystem.crm.action.EnterpriseAction" />
+	<!-- 学习测试 -->
+	<bean name="/yzsystem/study/tperson" class="com.yzsystem.tperson.action.TPersonAction" />
+	<bean name="/yzsystem/research/passenger" class="com.yzsystem.tresearch.action.PassengerAction" />
+	<bean name="/yzsystem/research/abroadperson" class="com.yzsystem.tresearch.action.AbroadPersonAction" />
+	<bean name="/yzsystem/research/appflow" class="com.yzsystem.tresearch.action.FlowAppAction">
+		<property name="flowAppService" ref="flowAppService" />
+		<property name="userService" ref="userService" />
+	</bean>
+</beans>

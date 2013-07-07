@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.imti.sysmgr.po.LoginLogPO" table="IMTI_LOGIN_LOG">
+        <id name="id" column="FID" type="java.lang.String">
+            <generator class="uuid"/>
+        </id>
+        <property name="loginId"  type="string" insert="true"  column="FLOGIN_ID" length="50"/>
+		<property name="userName" type="string" insert="true"  column="FUSER_NAME" length="20"/>
+		<property name="loginIP" type="string" insert="true"  column="FLOGIN_IP" length="30"/>
+		<property name="loginTime" type="java.sql.Timestamp" insert="true"  column="FLOGIN_TIME"/>
+    	<property name="type" type="string" insert="true"  column="FTYPE" />
+    	<property name="loginSuccess" type="string" insert="true"  column="FLOGIN_SUCCESS" />
+    	<property name="ztId" type="string" insert="true"  column="ZT_ID" />
+    </class>
+    <class name="com.imti.sysmgr.po.BusiLogPO" table="IMTI_BUSI_LOG">
+        <id name="logId" column="LOG_ID" type="java.lang.String">
+            <generator class="uuid"/>
+        </id>
+        <property name="rootModuleName"  type="string" insert="true"  column="ROOT_MODULENAME"/>
+		<property name="secondModuleName" type="string" insert="true"  column="SECOND_MODULENAME"/>
+		<property name="thirdModuleName" type="string" insert="true"  column="THIRD_MODULENAME"/>
+		<property name="operateName" type="string" insert="true"  column="OPERATE_NAME"/>
+    	<property name="operateStatusName" type="string" insert="true"  column="OPERATE_STATUSNAME" />
+    	<property name="errMsg" type="string" insert="true"  column="ERRMSG" />
+    	<property name="operator" type="string" insert="true"  column="OPERATOR" />
+    	<property name="operateTime" type="java.sql.Timestamp" insert="true"  column="OPERATE_TIME" />
+    </class>
+	
+</hibernate-mapping>

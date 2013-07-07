@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.yzsystem.hr.po.HrOrgPO" table="HR_ORG">
+        <id name="orgId" column="ORG_ID" type="java.lang.String">
+            <generator class="uuid"/>
+        </id>
+		<property name="orgName" type="string" update="true" insert="true"  column="ORG_NAME" />
+		<property name="orgCode" type="string" update="true" insert="true"  column="ORG_CODE" />
+		<property name="orgParentId" type="string" update="true" insert="true"  column="ORG_PARENT_ID" />
+		<property name="memo" type="string" update="true" insert="true"  column="MEMO"/>
+    	<property name="address" type="string" update="true" insert="true"  column="ADDRESS" />
+    	<property name="tel" type="string" update="true" insert="true"  column="TEL"/>
+    	<property name="fax" type="string" update="true" insert="true"  column="FAX" />
+    	<property name="orgParentName" type="string" update="true" insert="true"  column="PARENT_NAME" />
+    	<property name="delFlag" type="int" update="true" insert="true"  column="DELFLAG" />
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+        "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+ <form-beans>
+ 	<!--人事行政-->
+ 	<form-bean name="hrForm" type="com.yzsystem.hr.action.form.HrForm"/>
+ 	<!--企业资料-->
+ 	<form-bean name="enterpriseForm" type="com.yzsystem.crm.action.form.EnterpriseForm"/>
+ 	<!--展会项目-->
+ 	<form-bean name="exhibitionProjectForm" type="com.yzsystem.exhibitions.action.form.ExhibitionProjectForm"/>
+ 	<!--参展企业-->
+ 	<form-bean name="exhProjEnterpriseForm" type="com.yzsystem.exhibitions.action.form.ExhProjEnterpriseForm"/>
+ 	
+ 	<form-bean name="apForm" type="com.yzsystem.tresearch.action.form.AbroadPersonForm"/>
+ 	<form-bean name="flowAppForm" type="com.yzsystem.tresearch.action.form.FlowAppForm"/>
+ </form-beans>
+ 
+	 <!--全局跳转-->  
+	<global-forwards>
+	</global-forwards>
+ 
+	<action-mappings>
+		<!-- 系统配置-->
+	    <action scope="request" parameter="method"  path="/sysparam/sysparam" type="org.springframework.web.struts.DelegatingActionProxy" validate="false"/>
+		<!-- 人事行政-->
+	    <action scope="request" parameter="method" name="hrForm" path="/hr/hrmgr" type="org.springframework.web.struts.DelegatingActionProxy" validate="false"/>
+		<!-- 企业资料-->
+	    <action scope="request" parameter="method" name="enterpriseForm" path="/crm/enterprise" type="org.springframework.web.struts.DelegatingActionProxy" validate="false"/>
+		<!-- 主办单位-->
+	    <action scope="request" parameter="method" path="/exhibitions/hostunit" type="org.springframework.web.struts.DelegatingActionProxy" validate="false"/>
+	    <!-- 展会项目-->
+	    <action scope="request" parameter="method" name="exhibitionProjectForm" path="/exhibitions/exhibition" type="org.springframework.web.struts.DelegatingActionProxy" validate="false"/>
+	   	<!-- 参展企业-->
+	    <action scope="request" parameter="method" name="exhProjEnterpriseForm" path="/exhibitions/enterprise" type="org.springframework.web.struts.DelegatingActionProxy" validate="false"/>
+	   	<!-- 学习-->
+	   	<action scope="request" parameter="method" path="/study/tperson" type="org.springframework.web.struts.DelegatingActionProxy" validate="false"/>
+	   	<action scope="request" parameter="method" path="/research/passenger" type="org.springframework.web.struts.DelegatingActionProxy" validate="false"/>
+	   	<action scope="request" parameter="method" name="apForm" path="/research/abroadperson" type="org.springframework.web.struts.DelegatingActionProxy" validate="false"/>
+	   	<action scope="request" parameter="method" name="flowAppForm" path="/research/appflow" type="org.springframework.web.struts.DelegatingActionProxy" validate="false"/>
+	</action-mappings>
+	
+	     
+	<controller>
+		<set-property property="processorClass" value="org.apache.struts.tiles.TilesRequestProcessor" />
+	</controller>
+	<plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
+  		<set-property property="contextConfigLocation" value="/WEB-INF/classes/spring/module-yzsystem-action.xml" />
+ 	</plug-in>
+ 	<plug-in className="org.apache.struts.tiles.TilesPlugin" >
+		<set-property property="definitions-config" value="/WEB-INF/tiles-def.xml" />
+		<set-property property="moduleAware" value="true" />
+		<set-property property="definitions-debug" value="2"/>
+		<set-property property="definitions-parser-details" value="2"/>
+		<set-property property="definitions-parser-validate" value="true" />
+	</plug-in>
+</struts-config>

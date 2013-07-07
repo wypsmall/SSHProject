@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.imti.sysmgr.po.SysOperatorPO" table="IMTI_SYS_OPERATOR">
+        <id name="id" column="FID" type="java.lang.String">
+            <generator class="uuid"/>
+        </id>
+		<property name="name" type="string" update="true" insert="true"  column="FNAME" length="50"/>
+		<property name="code" type="string" update="true" insert="true"  column="FCODE" length="50"/>
+		<property name="rsId" type="string" update="true" insert="true"  column="FRS_ID" length="32"/>
+		<property name="displayIndex" type="int" update="true" insert="true"  column="FDISPLAY_INDEX"/>
+    	<property name="url" type="string" update="true" insert="true"  column="FURL" length="200"/>
+    	<property name="memo" type="string" update="true" insert="true"  column="FMEMO" length="300"/>
+    	<property name="ztId" type="string" update="true" insert="true"  column="ZT_ID" length="100"/>
+    </class>
+	
+</hibernate-mapping>
